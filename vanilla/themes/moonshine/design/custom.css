@@ -5,7 +5,8 @@
 
 /* ==================================================
    PRIMARY COLORS:
-   Brown color #795548
+   Brown color #6D4C41
+   Green color #008369
    Yellow color #FFCA28
    Black color #000000
    White color #ffffff
@@ -42,10 +43,10 @@ body{
   Nav Bar styling
 ================================================== */
  #Head{
-  background-color: #795548;
+  background-color: #008369;
   border-bottom: 4px solid #FFCA28;
   color: #795548;
-  box-shadow: 5px 5px 5px 5px #e6e6e6;
+  box-shadow: 5px 5px 5px 5px #cccccc;
 }
 #Head a {
     color:  #FFCA28;
@@ -95,7 +96,7 @@ body{
   User profile menu styling
 ================================================== */
 .MeBox{
- background-color: #795548;
+ background-color:#6D4C41;
  padding: 10px;
  border-radius: 5px;
 }
@@ -103,20 +104,39 @@ body{
 .MeBox a{
   color:#ffffff;
 }
+
 .MeBox a:hover{
   color:#FFCA28;
 }
 
+.MeBox .PhotoWrap img{
+  border-radius: 5px;
+}
+/*!!!!!!!!!!!!!
+   NEEDS FIXING
+   
+.MeBox span a {
+  background-color:#FFCA28;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 5px;
+
+}
+.MeBox span a:hover {
+    background-color:#008369;
+}
+!!!!!!!!!!!!!!!*/
 /* ==================================================
   New discussion button
 ================================================== */
 .BigButton{
   border-radius: 5px;
-  background-color: #795548;
+  background-color: #008369;
   color:#ffffff;
 }
 .BigButton:hover{
   color:#FFCA28;
+
 }
 .bodybox-wrap{
   border-radius: 15px;
@@ -127,7 +147,7 @@ body{
    Side menu styling
 ================================================== */
 .BoxFilter{
-  background-color:#795548;
+  background-color:#6D4C41;
   border-radius: 5px;
   text-align: center;
 }
