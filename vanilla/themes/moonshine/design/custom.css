@@ -1,10 +1,54 @@
-/* #795548 */
+/* ***********************************************
+---STYLING FOR VANILLA FOURM-MOONSHINE THEME------
+**************************************************/
+
+
+/* ==================================================
+   PRIMARY COLORS:
+   Brown color #795548
+   Yellow color #FFCA28
+   Black color #000000
+   White color #ffffff
+
+   SECONDARY COLORS
+
+   Light-Brown color #8D6E63
+   Dark-Brown color #3E2723
+================================================== */
+
+
+/* ==================================================
+  Google font import
+================================================== */
 @import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+
+/* ==================================================
+  Global varibles
+================================================== */
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Comfortaa', roboto;
+    font-weight: bold;
+}
+::placeholder{
+  font-family: 'Comfortaa', roboto;
+}
+body{
+  font-family: 'Comfortaa', roboto;
+  background-color: #f2f2f2;
+}
+
+/* ==================================================
+  Nav Bar styling
+================================================== */
  #Head{
   background-color: #795548;
+  border-bottom: 4px solid #FFCA28;
+  color: #795548;
+  box-shadow: 5px 5px 5px 5px #e6e6e6;
 }
 #Head a {
-    color: #ffffff;
+    color:  #FFCA28;
     font-weight: bold;
 
 }
@@ -16,43 +60,74 @@
     font-family: 'Comfortaa', fantasy;
 
 }
-h1, h2, h3, h4, h5, h6{
-    font-family: 'Comfortaa', roboto;
-    font-weight: bold;
-}
-::placeholder{
-  font-family: 'Comfortaa', roboto;
-}
-body{
-  font-family: 'Comfortaa', roboto;
-  background-color: #EFEBE9;
-}
-/* Monshine logo */
+
+/* ==================================================
+   Monshine logo
+================================================== */
 #logo{
   width:40px;
 
 }
-/* nav bar ul styling */
+/* ==================================================
+  Navbar ul styling
+================================================== */
+
 .SiteSearch .InputBox, .SiteSearch .Button{
   border-radius: 5px;
   margin-top: 40px;
 }
-/* new discussion button */
+
+/* ==================================================
+  Breadcrum menu
+================================================== */
+.BreadcrumbsWrapper{
+  margin-top: 10px;
+}
+.BreadcrumbsWrapper .Breadcrumbs span{
+  font-size: 15px;
+   color: #8D6E63;
+}
+.BreadcrumbsWrapper .Breadcrumbs span:hover{
+  color:#3E2723;
+}
+
+/* ==================================================
+  User profile menu styling
+================================================== */
+.MeBox{
+ background-color: #795548;
+ padding: 10px;
+ border-radius: 5px;
+}
+
+.MeBox a{
+  color:#ffffff;
+}
+.MeBox a:hover{
+  color:#FFCA28;
+}
+
+/* ==================================================
+  New discussion button
+================================================== */
 .BigButton{
   border-radius: 5px;
-  background-color: #6D4C41;
+  background-color: #795548;
   color:#ffffff;
 }
 .BigButton:hover{
   color:#FFCA28;
-  background-color: #795548;
 }
 .bodybox-wrap{
   border-radius: 15px;
 }
-/* styling for side menu */
+
+
+/* ==================================================
+   Side menu styling
+================================================== */
 .BoxFilter{
-  background-color:#6D4C41;
+  background-color:#795548;
   border-radius: 5px;
   text-align: center;
 }
@@ -71,4 +146,11 @@ body{
 .SiteMenu{
   float:right;
   margin-top: 40px;
+}
+
+/* ==================================================
+   Category menu styling
+================================================== */
+.CategoryFilter{
+
 }
