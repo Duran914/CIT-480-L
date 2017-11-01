@@ -5,8 +5,8 @@
 
 /* ==================================================
    PRIMARY COLORS:
-   Brown color #6D4C41
-   Green color #008369
+   Brown color #00796B
+   Green color #00796B
    Yellow color #FFCA28
    Black color #000000
    White color #ffffff
@@ -43,21 +43,22 @@ body{
   Nav Bar styling
 ================================================== */
  #Head{
-  background-color: #008369;
+  background-color:#00796B;
   border-bottom: 4px solid #FFCA28;
   color: #795548;
-  box-shadow: 5px 5px 5px 5px #cccccc;
+  box-shadow: 5px 5px 7px #9E9E9E;
 }
 #Head a {
     color:  #FFCA28;
     font-weight: bold;
-
+    text-decoration: none;
+    font-size: 12px;
 }
+
 #Head .SiteTitle a {
     color: #ffffff;
     font-weight: bold;
-    font-size: 40px;
-    margin-top: 20px;
+    font-size: 50px;
     font-family: 'Comfortaa', fantasy;
 
 }
@@ -66,8 +67,8 @@ body{
    Monshine logo
 ================================================== */
 #logo{
-  width:40px;
-
+  width:80px;
+  margin-bottom: -8px;
 }
 /* ==================================================
   Navbar ul styling
@@ -75,7 +76,21 @@ body{
 
 .SiteSearch .InputBox, .SiteSearch .Button{
   border-radius: 5px;
-  margin-top: 40px;
+  margin-top: 50px;
+}
+
+.signinout{
+  float: right;
+  padding-right:5px;
+}
+
+.SiteMenu{
+  float:right;
+  margin-top: 50px;
+}
+
+.SiteMenu a{
+  font-size: 12px;
 }
 
 /* ==================================================
@@ -89,16 +104,17 @@ body{
    color: #8D6E63;
 }
 .BreadcrumbsWrapper .Breadcrumbs span:hover{
-  color:#3E2723;
+  color:#00796B;
 }
 
 /* ==================================================
   User profile menu styling
 ================================================== */
 .MeBox{
- background-color:#6D4C41;
+ background-color:#00796B;
  padding: 10px;
  border-radius: 5px;
+ box-shadow: 5px 5px 7px #9E9E9E;
 }
 
 .MeBox a{
@@ -114,7 +130,7 @@ body{
 }
 /*!!!!!!!!!!!!!
    NEEDS FIXING
-   
+
 .MeBox span a {
   background-color:#FFCA28;
   border-radius: 5px;
@@ -131,12 +147,13 @@ body{
 ================================================== */
 .BigButton{
   border-radius: 5px;
-  background-color: #008369;
+  background-color: #00796B;
   color:#ffffff;
+  box-shadow: 5px 5px 7px #9E9E9E;
 }
 .BigButton:hover{
   color:#FFCA28;
-
+  background-color: #004D40;
 }
 .bodybox-wrap{
   border-radius: 15px;
@@ -147,9 +164,10 @@ body{
    Side menu styling
 ================================================== */
 .BoxFilter{
-  background-color:#6D4C41;
+  background-color:#795548;
   border-radius: 5px;
   text-align: center;
+  box-shadow: 5px 5px 7px #9E9E9E;
 }
 
 .FilterMenu a{
@@ -158,19 +176,34 @@ body{
 .FilterMenu a:hover{
   color:#FFCA28;
 }
-.signinout{
-  float: right;
-  padding-right:5px;
-}
-
-.SiteMenu{
-  float:right;
-  margin-top: 40px;
-}
 
 /* ==================================================
    Category menu styling
 ================================================== */
 .CategoryFilter{
+  background-color:#795548;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 5px 5px 7px #9E9E9E;
+}
+  .CategoryFilter a{
+    color:#ffffff;
+  }
+  .CategoryFilter a:hover{
+    color:#FFCA28;
+}
 
+.CategoryFilterTitle{
+  color:#ffffff;
+}
+.CategoryFilterOptions{
+  color:#ffffff;
+}
+
+/* ==================================================
+   Welcome title styling
+================================================== */
+ h1 .H .HomepageTitle{
+  background-color: #00796B;
+  color:#ffffff;
 }

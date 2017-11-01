@@ -8,8 +8,8 @@
 
 <div id="Frame">
     <div class="Head" id="Head">
-        <div class="Row">
-            <img id="logo" src="http://collegevault.com/wp-content/uploads/2014/11/Little_Brown_Jug_2.png" alt="">
+        <div class="Row">   <!--http://collegevault.com/wp-content/uploads/2014/11/Little_Brown_Jug_2.png-->
+            <img id="logo" src="http://www.clker.com/cliparts/d/C/V/s/q/D/oktoberfest-beer-mug.svg" alt="">
             <strong class="SiteTitle"><a href="{link path="/"}">{logo}</a></strong>
 
             <div class="SiteSearch">{searchbox}</div>
@@ -33,7 +33,7 @@
         </div>
     </div>
     <div id="Foot">
-        <p>TEST</p>
+        <p>Im am the Footer </p>
 
     </div>
 </div>
