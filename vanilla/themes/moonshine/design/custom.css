@@ -5,7 +5,7 @@
 
 /* ==================================================
    PRIMARY COLORS:
-   Brown color #00796B
+   Brown color #795548
    Green color #00796B
    Yellow color #FFCA28
    Black color #000000
@@ -46,13 +46,19 @@ body{
   background-color:#00796B;
   border-bottom: 4px solid #FFCA28;
   color: #795548;
-  box-shadow: 5px 5px 7px #9E9E9E;
+  box-shadow: 2px 5px 7px #9E9E9E;
 }
 #Head a {
     color:  #FFCA28;
     font-weight: bold;
     text-decoration: none;
     font-size: 12px;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+}
+
+#Head a:hover{
+    color: #ffffff;
 }
 
 #Head .SiteTitle a {
@@ -89,9 +95,6 @@ body{
   margin-top: 50px;
 }
 
-.SiteMenu a{
-  font-size: 12px;
-}
 
 /* ==================================================
   Breadcrum menu
@@ -114,11 +117,13 @@ body{
  background-color:#00796B;
  padding: 10px;
  border-radius: 5px;
- box-shadow: 5px 5px 7px #9E9E9E;
+ box-shadow: 2px 5px 7px #9E9E9E;
 }
 
 .MeBox a{
   color:#ffffff;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
 }
 
 .MeBox a:hover{
@@ -128,20 +133,20 @@ body{
 .MeBox .PhotoWrap img{
   border-radius: 5px;
 }
-/*!!!!!!!!!!!!!
-   NEEDS FIXING
-
-.MeBox span a {
+.MeBox .MeMenu .ToggleFlyout{
   background-color:#FFCA28;
   border-radius: 5px;
-  padding: 5px;
-  margin-left: 5px;
+  padding-top:4px;
+  padding-bottom:8px;
+  margin-left: 3px;
 
 }
-.MeBox span a:hover {
-    background-color:#008369;
+.MeBox .MeMenu .ToggleFlyout a:hover{
+    background-color:#FFCA28;
+    border-radius: 5px;
+
 }
-!!!!!!!!!!!!!!!*/
+
 /* ==================================================
   New discussion button
 ================================================== */
@@ -149,14 +154,13 @@ body{
   border-radius: 5px;
   background-color: #00796B;
   color:#ffffff;
-  box-shadow: 5px 5px 7px #9E9E9E;
+  box-shadow: 2px 5px 7px #9E9E9E;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
 }
 .BigButton:hover{
   color:#FFCA28;
   background-color: #004D40;
-}
-.bodybox-wrap{
-  border-radius: 15px;
 }
 
 
@@ -167,11 +171,13 @@ body{
   background-color:#795548;
   border-radius: 5px;
   text-align: center;
-  box-shadow: 5px 5px 7px #9E9E9E;
+  box-shadow: 2px 5px 7px #9E9E9E;
 }
 
 .FilterMenu a{
   color:#ffffff;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
 }
 .FilterMenu a:hover{
   color:#FFCA28;
@@ -184,10 +190,12 @@ body{
   background-color:#795548;
   border-radius: 5px;
   text-align: center;
-  box-shadow: 5px 5px 7px #9E9E9E;
+  box-shadow: 2px 5px 7px #9E9E9E;
 }
   .CategoryFilter a{
     color:#ffffff;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
   }
   .CategoryFilter a:hover{
     color:#FFCA28;
@@ -201,9 +209,49 @@ body{
 }
 
 /* ==================================================
-   Welcome title styling
+   Categorys container
 ================================================== */
- h1 .H .HomepageTitle{
+/* Header for categories */
+ .Column .H{
   background-color: #00796B;
   color:#ffffff;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+  box-shadow: 2px 5px 7px #9E9E9E;
 }
+/* Categorory divs */
+.Column .DataList .Item{
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 2px 5px 7px #9E9E9E;
+  border: 2px solid #00796B;
+}
+/*  */
+.Column .DataList .Item .TitleWrap a{
+  color: #ffffff;
+  background-color: #00796B;
+  margin-top: -15px;
+  margin-left: -16px;
+  margin-right:-16px;
+  padding:5px;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+}
+
+.Column .DataList .Item .TitleWrap a:hover{
+  color: #FFCA28;
+}
+
+.Column .DataList .Item .Meta{
+  margin-left: -14px;
+}
+/* remove rss button */
+.Column .DataList .Item .Meta img{
+  display:none;
+}
+/*!!!!!!!!!!!!!!!!!!!!!
+  Need to fix gear icon
+  !!!!!!!!!!!!!!!!!!!!!!*/
