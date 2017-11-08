@@ -81,6 +81,12 @@ body{
 .SiteSearch .InputBox, .SiteSearch .Button{
   border-radius: 5px;
   margin-top: 50px;
+  padding:7px;
+}
+
+.SiteSearch .InputBox:focus{
+  background-color:#B2DFDB;
+
 }
 
 .signinout{
@@ -90,7 +96,7 @@ body{
 
 .SiteMenu{
   float:right;
-  margin-top: 50px;
+  margin-top: 55px;
 }
 
 
@@ -102,7 +108,7 @@ body{
 }
 .BreadcrumbsWrapper .Breadcrumbs span{
   font-size: 15px;
-   color: #8D6E63;
+   color: #004D40;
 }
 .BreadcrumbsWrapper .Breadcrumbs span:hover{
   color:#00796B;
@@ -143,11 +149,18 @@ body{
   -webkit-transition-duration: 0.4s;
 
 }
-
 .MeBox .MeMenu .ToggleFlyout > a:hover{
       background-color:#FFCA28;
 }
+/* Me box pop down menu styling */
+.MeBox .MeMenu .Open .MenuItems li a{
+  background-color:#ffffff;
+}
 
+.MeBox .MeMenu .Open .MenuItems li a:hover{
+  background-color: #B2DFDB !important;
+  color:#000000 !important;
+}
 
 /* ==================================================
   New discussion button
@@ -167,7 +180,7 @@ body{
 
 
 /* ==================================================
-   Side menu styling
+   Side menu--styling Categorys/recent discuss/activity/My discuss
 ================================================== */
 .BoxFilter{
   background-color:#fff;
@@ -226,7 +239,7 @@ body{
 }
 
 /* ==================================================
-   Categorys container
+   Categorys container--RightSide
 ================================================== */
 /* Header for categories */
  .Column .H{
@@ -262,13 +275,12 @@ body{
   color: #FFCA28;
 }
 
-.Column .DataList .Item .Meta{
-  margin-left: -12px;
-}
 /* remove rss button */
 .Column .DataList .Item .Meta img{
   display:none;
 }
+
+
 /* gear icon placement(only for root user) */
   ul li .Options .ToggleFlyout .OptionsTitle{
   margin-top: 5px;
