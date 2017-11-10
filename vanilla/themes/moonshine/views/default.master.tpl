@@ -19,6 +19,7 @@
                 <!-- {inbox_link} -->
                 {profile_link}
                {signinout_link}
+               <!-- <li><a href="#">&#9776</a></li> -->
             </ul>
         </div>
     </div>

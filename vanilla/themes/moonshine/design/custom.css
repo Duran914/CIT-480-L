@@ -12,6 +12,7 @@
 
    SECONDARY COLORS
    light-green #B2DFDB
+   lightest-greeen #00BFA5
 ================================================== */
 
 
@@ -52,6 +53,8 @@ body{
     font-size: 12px;
     transition-duration: 0.4s;
     -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
 }
 
 #Head a:hover{
@@ -108,10 +111,10 @@ body{
 }
 .BreadcrumbsWrapper .Breadcrumbs span{
   font-size: 15px;
-   color: #004D40;
+   color: #00796B;
 }
 .BreadcrumbsWrapper .Breadcrumbs span:hover{
-  color:#00796B;
+  color:#00BFA5;
 }
 
 /* ==================================================
@@ -129,6 +132,8 @@ body{
   color:#ffffff;
   transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
 }
 
 .MeBox > a:hover,
@@ -147,12 +152,21 @@ body{
   margin-left: 3px;
   transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
 
 }
 .MeBox .MeMenu .ToggleFlyout > a:hover{
       background-color:#FFCA28;
 }
 /* Me box pop down menu styling */
+.MeBox .MeMenu .ToggleFlyout .Flyout ul li a{
+  color:#00796B;
+}
+.MeBox .MeMenu .ToggleFlyout .Flyout ul li a:hover{
+  color:#00BFA5;
+}
+
 .MeBox .MeMenu .Open .MenuItems li a{
   background-color:#ffffff;
 }
@@ -172,6 +186,8 @@ body{
   box-shadow: 2px 5px 7px #9E9E9E;
   transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
 }
 .BigButton:hover{
   color:#FFCA28;
@@ -200,6 +216,8 @@ body{
   color:#000000;
   transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
 }
 /* styling for active setting */
 #Panel .FilterMenu .Active{
@@ -223,17 +241,17 @@ body{
   box-shadow: 2px 5px 7px #9E9E9E;
 }
   .CategoryFilter a{
-    color:#000000;
+    color:#00796B;
     transition-duration: 0.4s;
     -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
   }
   .CategoryFilter a:hover{
-    color:#FFCA28;
+    color:#00BFA5;
 }
 
-.CategoryFilterTitle{
-  color:#000000;
-}
+.CategoryFilterTitle,
 .CategoryFilterOptions{
   color:#000000;
 }
@@ -259,7 +277,7 @@ body{
   box-shadow: 2px 5px 7px #9E9E9E;
   border: 2px solid #00796B;
 }
-/*  */
+/* forum Categorys headers */
 .Column .DataList .Item .TitleWrap a{
   color: #ffffff;
   background-color: #00796B;
@@ -269,6 +287,8 @@ body{
   padding:5px;
   transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
 }
 
 .Column .DataList .Item .TitleWrap a:hover{
@@ -279,7 +299,17 @@ body{
 .Column .DataList .Item .Meta img{
   display:none;
 }
-
+/* most recent by user */
+.Meta .LastDiscussionTitle a{
+  color:#00796B;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+}
+.Meta .LastDiscussionTitle a:hover{
+  color:#00BFA5;
+}
 
 /* gear icon placement(only for root user) */
   ul li .Options .ToggleFlyout .OptionsTitle{
