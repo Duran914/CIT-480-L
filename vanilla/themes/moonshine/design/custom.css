@@ -13,6 +13,7 @@
    SECONDARY COLORS
    light-green #B2DFDB
    lightest-greeen #00BFA5
+   grey shading color #e6e6e6
 ================================================== */
 
 
@@ -198,21 +199,25 @@ body{
 /* ==================================================
    Side menu--styling Categorys/recent discuss/activity/My discuss
 ================================================== */
-.BoxFilter{
+.BoxFilter,
+.Box.BoxCategories/* styling for catergorie list */{
   background-color:#fff;
   border-radius: 5px;
   border: 2px solid #00796B;
   text-align: center;
   box-shadow: 2px 5px 7px #9E9E9E;
 }
-.FilterMenu li{
+.FilterMenu li,
+.Box.BoxCategories li{
   color:#FFCA28;
   background-color: #ffffff;
 }
-.FilterMenu li:hover{
+.FilterMenu li:hover,
+.Box.BoxCategories li:hover{
   background-color: #B2DFDB;
 }
-.FilterMenu a{
+.FilterMenu a,
+.Box.BoxCategories a{
   color:#000000;
   transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s;
@@ -220,18 +225,25 @@ body{
   -o-transition-duration: 0.4s;
 }
 /* styling for active setting */
-#Panel .FilterMenu .Active{
+#Panel .FilterMenu .Active,
+.Box.BoxCategories .ClearFix.Depth1.Active{
   color:#ffffff;
   background-color: #00796B;
 }
 
-#Panel .FilterMenu .Active a{
+#Panel .FilterMenu .Active a,
+.Box.BoxCategories .ClearFix.Depth1.Active a{
   color:#FFCA28;
   background-color: #00796B;
 }
 
+#Panel .FilterMenu .Active a:hover,
+.Box.BoxCategories .ClearFix.Depth1.Active a:hover{
+  color:#FFCA28;
+  background-color: #00796B;
+}
 /* ==================================================
-   Category menu styling
+   Category menu(followed categories)
 ================================================== */
 .CategoryFilter{
   background-color:#fff;
@@ -255,7 +267,6 @@ body{
 .CategoryFilterOptions{
   color:#000000;
 }
-
 /* ==================================================
    Categorys container--RightSide
 ================================================== */
@@ -315,3 +326,46 @@ body{
   ul li .Options .ToggleFlyout .OptionsTitle{
   margin-top: 5px;
   }
+  /* ==================================================
+     styling for user responses within a category
+  ================================================== */
+ .DataList .ItemContent .Title a{
+   color:#00796B;
+ }
+
+ .DataList .ItemContent .Title a:hover{
+   color:#00BFA5;
+ }
+
+ .DataList .ItemContent .Meta .Tag{
+   color:#FFCA28;
+   background-color:#00796B;
+ }
+
+ .DataList .ItemContent .Meta .MItem.LastCommentBy a{
+   color: #00796B;
+ }
+
+ .DataList .ItemContent .Meta .MItem.LastCommentBy a:hover{
+   color: #00BFA5;
+ }
+
+ .DataList span.Options .ToggleFlyout .OptionsTitle{
+   margin-top: 0px;
+ }
+
+ /* ==================================================
+    styling for leaving a comment to a user response within a category
+ ================================================== */
+
+ .MessageList .PageTitle{
+   background-color:#B2DFDB;
+   padding: 5px;
+   border-radius: 5px;
+ }
+
+ .MessageList .Item .Discussion{
+   background-color: #e6e6e6;
+   padding: 5px;
+   border-radius: 5px;
+ }
