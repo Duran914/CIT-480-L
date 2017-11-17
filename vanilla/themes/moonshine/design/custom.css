@@ -37,6 +37,7 @@ h1, h2, h3, h4, h5, h6{
 body{
   font-family: 'Comfortaa', roboto;
   background-color: #f2f2f2;
+  margin: 0;
 }
 
 /* ==================================================
@@ -163,6 +164,10 @@ body{
 /* Me box pop down menu styling */
 .MeBox .MeMenu .ToggleFlyout .Flyout ul li a{
   color:#00796B;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
 }
 .MeBox .MeMenu .ToggleFlyout .Flyout ul li a:hover{
   color:#00BFA5;
@@ -380,6 +385,10 @@ body{
    color:#000000;
  }
 
+ /*.Discussion .Message p{
+   color:#ffffff;
+ }*/
+
  .Discussion .Item-Header .Meta .MItem.Category,
  .Discussion .Item-Header .Meta .MItem.IPAddress{
    display: none;
@@ -444,4 +453,42 @@ body{
    .MessageForm input.Button:hover{
     background-color:#fff;
     color:#00796B;
+}
+
+/* ==================================================
+   styling for New Dicussion
+================================================== */
+.Column .FormWrapper{
+  background-color: #00796B;
+  border-radius: 5px;
+}
+.Column .FormWrapper form .P label{
+  color:#fff;
+}
+
+.Column .FormWrapper form .P .List.Inline.PostOptions{
+  color:#FFCA28;
+}
+
+.Column .FormWrapper form .Buttons .Button{
+  background-color: #FFCA28;
+  border: none;
+  margin-right: 5px;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+}
+
+.Column .FormWrapper form .Buttons .Button:hover{
+  background-color:#fff;
+  color:#00796B;
+}
+
+/* ==================================================
+   recent disscusions page
+================================================== */
+/* Higlighting for new message */
+.DataList .ItemContent .Meta .HasNew{
+  background-color:#B2DFDB;
 }
