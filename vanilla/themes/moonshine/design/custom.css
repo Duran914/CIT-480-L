@@ -40,6 +40,22 @@ body{
   margin: 0;
 }
 
+textarea{
+ border: none;
+ border-radius: 5px;
+}
+
+textarea:focus{
+ background-color: #ffffff;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus{
+  background:#ffffff;
+}
+
+
 /* ==================================================
   Nav Bar styling
 ================================================== */
@@ -90,10 +106,6 @@ body{
   padding:7px;
 }
 
-.SiteSearch .InputBox:focus{
-  background-color:#ffffff;
-}
-
 .signinout{
   float: right;
   padding-right:5px;
@@ -111,11 +123,15 @@ body{
 .BreadcrumbsWrapper{
   margin-top: 10px;
 }
-.BreadcrumbsWrapper .Breadcrumbs span{
+.BreadcrumbsWrapper .Breadcrumbs span a{
   font-size: 15px;
-   color: #00796B;
+  color: #00796B;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
 }
-.BreadcrumbsWrapper .Breadcrumbs span:hover{
+.BreadcrumbsWrapper .Breadcrumbs span a:hover{
   color:#00BFA5;
 }
 
@@ -131,7 +147,7 @@ body{
 
 .MeBox > a,
 .MeBox .WhoIs a.Username{
-  color:#ffffff;
+  color:#FFCA28;
   transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s;
   -moz-transition-duration: 0.4s;
@@ -140,7 +156,7 @@ body{
 
 .MeBox > a:hover,
 .MeBox .WhoIs a.Username:hover{
-  color:#FFCA28;
+  color:#ffffff;
 }
 
 .MeBox .PhotoWrap img{
@@ -363,6 +379,9 @@ body{
     styling for leaving a comment to a user response within a category
  ================================================== */
 
+/* Add styling for header */
+
+
  .MessageList .PageTitle{
    background-color:#ffffff;
    border: 2px solid #00796B;
@@ -372,22 +391,27 @@ body{
 
  .MessageList .Item .Discussion{
    background-color: #00796B;
+   color:#ffffff;
    padding: 5px;
    border-radius: 5px;
    box-shadow: 2px 5px 7px #9E9E9E;
  }
 
 .Discussion .Item-Header .AuthorWrap .Author a.Username{
-   color:#000000;
+   color:#FFCA28;
+   transition-duration: 0.4s;
+   -webkit-transition-duration: 0.4s;
+   -moz-transition-duration: 0.4s;
+   -o-transition-duration: 0.4s;
+ }
+ .Discussion .Item-Header .AuthorWrap .Author a.Username:hover{
+   color:#FFD740;
  }
 
  .Discussion .Item-Header .Meta .MItem a{
-   color:#000000;
- }
-
- /*.Discussion .Message p{
    color:#ffffff;
- }*/
+   cursor: default;
+ }
 
  .Discussion .Item-Header .Meta .MItem.Category,
  .Discussion .Item-Header .Meta .MItem.IPAddress{
@@ -395,15 +419,26 @@ body{
  }
    /* Add border to profile images */
   .MessageList .Item .Discussion .Item-Header .AuthorWrap .Author a img,
-  .MessageForm .CommentFormWrap .Form-HeaderWrap .Form-Header .Author a img{
+  .CommentsWrap ul.MessageList li .Comment .Item-Header .AuthorWrap .Author a img,
+  .MessageForm .CommentFormWrap .Author a img{
     border-radius: 5px;
   }
 
   .CommentFormWrap .Form-BodyWrap{
     background-color: #00796B;
     border-radius: 5px;
+    box-shadow: 2px 5px 7px #9E9E9E;
   }
 
+  /* Styling for "Comments" header */
+  .Column .CommentsWrap .DataBox .CommentHeading{
+    background-color:#FFCA28;
+    color:#00796B;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-shadow: 2px 5px 7px #9E9E9E;
+  }
   /* Styling for new comments */
 
   .Column .CommentsWrap ul.MessageList li{
@@ -413,7 +448,24 @@ body{
     width:680px;
     margin-left: 10px;
     margin-bottom: 20px;
+
   }
+
+ .CommentsWrap ul.MessageList li .Comment .Item-Header .AuthorWrap .Author a.Username{
+     color:#00796B;
+     transition-duration: 0.4s;
+     -webkit-transition-duration: 0.4s;
+     -moz-transition-duration: 0.4s;
+     -o-transition-duration: 0.4s;
+   }
+
+   .CommentsWrap ul.MessageList li .Comment .Item-Header .AuthorWrap .Author a.Username:hover{
+     color:#00BFA5;
+   }
+
+   .CommentsWrap ul.MessageList li .Comment .Item-Header .Meta .MItem a{
+     color:#000000;
+   }
 
 /* Yellow color*/
   .MessageForm h2.H, /* Styling for "Leave a comment" */
@@ -430,19 +482,11 @@ body{
     color:#ffffff;
   }
 
-  .MessageForm .TextBoxWrapper textarea{
-    border: none;
-    border-radius: 5px;
-  }
-
-  .MessageForm .TextBoxWrapper textarea:focus{
-    background-color: #ffffff;
-  }
-
   .MessageForm .Buttons a.Button,
   .MessageForm input.Button{
     background-color: #FFCA28;
     border: none;
+    box-shadow: 2px 2px 5px #000;
     transition-duration: 0.4s;
     -webkit-transition-duration: 0.4s;
     -moz-transition-duration: 0.4s;
@@ -481,7 +525,7 @@ body{
 }
 
 .Column .FormWrapper form .Buttons .Button:hover{
-  background-color:#fff;
+  background-color:#ffffff;
   color:#00796B;
 }
 
@@ -491,4 +535,98 @@ body{
 /* Higlighting for new message */
 .DataList .ItemContent .Meta .HasNew{
   background-color:#B2DFDB;
+}
+/* change color for a tags */
+
+/* ==================================================
+   Styling for activity page(s)
+================================================== */
+.Column .ActivityFormWrap .FormWrapper{
+margin-bottom: 20px;
+box-shadow: 2px 5px 7px #9E9E9E;
+}
+
+.Column .ActivityFormWrap .FormWrapper .Buttons input.Button{
+  box-shadow: 2px 2px 5px #000;
+}
+
+/* ==================================================
+   User account page
+================================================== */
+
+
+
+/* ==================================================
+   Styling when user is not loged in
+================================================== */
+
+/* Styling for welcome div for new users */
+
+.Column .Box.GuestBox{
+  background-color: #00796B;
+  color: #ffffff;
+  padding:5px;
+  border-radius: 5px;
+}
+
+.Column .Box.GuestBox h4{
+  color:#FFCA28;
+}
+
+.Column .Box.GuestBox .P a.Button{
+  background-color: #FFCA28;
+  border: none;
+  margin-right: 5px;
+  box-shadow: 2px 2px 5px #000;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+}
+
+.Column .Box.GuestBox .P a.Button:hover{
+  background-color:#ffffff;
+  color:#00796B;
+}
+
+/* styling for leaving a comment to a user response within a category */
+
+.Foot .Note a{
+  color: #00796B;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+}
+
+.Foot .Note a:hover{
+  color:#00BFA5;
+}
+
+/*!!!!!!!! Styling for Registering a new user !!!!!!!!!*/
+.Column .FormTitleWrapper h1{
+  color:#ffffff;
+  background-color:#00796B;
+  padding:5px;
+  border-radius: 5px;
+}
+
+
+.Column .FormTitleWrapper .FormWrapper{
+  box-shadow: 2px 5px 7px #9E9E9E;
+}
+
+.Column .FormTitleWrapper .FormWrapper form#Form_User_Register ul li.Buttons .Button{
+  box-shadow: 2px 2px 5px #000;
+}
+
+.Column .FormTitleWrapper .FormWrapper form#Form_User_Register ul li label,
+.Column .FormTitleWrapper .FormWrapper form#Form_User_Register ul li label.CheckBoxLabel a{
+  color:#FFCA28;
+}
+
+.Column .FormTitleWrapper .FormWrapper form#Form_User_Register ul li .Gloss,
+.Column .FormTitleWrapper .FormWrapper form#Form_User_Register ul li label.RadioLabel,
+.Column .FormTitleWrapper .FormWrapper form#Form_User_Register ul li label.CheckBoxLabel{
+  color:#ffffff;
 }
