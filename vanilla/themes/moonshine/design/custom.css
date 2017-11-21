@@ -55,6 +55,14 @@ input[type="email"]:focus{
   background:#ffffff;
 }
 
+a,
+input[type="submit"],
+li{
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+}
 
 /* ==================================================
   Nav Bar styling
@@ -70,10 +78,6 @@ input[type="email"]:focus{
     font-weight: bold;
     text-decoration: none;
     font-size: 12px;
-    transition-duration: 0.4s;
-    -webkit-transition-duration: 0.4s;
-    -moz-transition-duration: 0.4s;
-    -o-transition-duration: 0.4s;
 }
 
 #Head a:hover{
@@ -126,10 +130,6 @@ input[type="email"]:focus{
 .BreadcrumbsWrapper .Breadcrumbs span a{
   font-size: 15px;
   color: #00796B;
-  transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
 }
 .BreadcrumbsWrapper .Breadcrumbs span a:hover{
   color:#00BFA5;
@@ -148,10 +148,6 @@ input[type="email"]:focus{
 .MeBox > a,
 .MeBox .WhoIs a.Username{
   color:#FFCA28;
-  transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
 }
 
 .MeBox > a:hover,
@@ -168,10 +164,6 @@ input[type="email"]:focus{
   padding-top:4px;
   padding-bottom:5px;
   margin-left: 3px;
-  transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
 
 }
 .MeBox .MeMenu .ToggleFlyout > a:hover{
@@ -180,10 +172,6 @@ input[type="email"]:focus{
 /* Me box pop down menu styling */
 .MeBox .MeMenu .ToggleFlyout .Flyout ul li a{
   color:#00796B;
-  transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
 }
 .MeBox .MeMenu .ToggleFlyout .Flyout ul li a:hover{
   color:#00BFA5;
@@ -206,10 +194,6 @@ input[type="email"]:focus{
   background-color: #00796B;
   color:#ffffff;
   box-shadow: 2px 5px 7px #9E9E9E;
-  transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
 }
 .BigButton:hover{
   color:#FFCA28;
@@ -240,10 +224,6 @@ input[type="email"]:focus{
 .FilterMenu a,
 .Box.BoxCategories a{
   color:#000000;
-  transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
 }
 /* styling for active setting */
 #Panel .FilterMenu .Active,
@@ -275,10 +255,6 @@ input[type="email"]:focus{
 }
   .CategoryFilter a{
     color:#00796B;
-    transition-duration: 0.4s;
-    -webkit-transition-duration: 0.4s;
-    -moz-transition-duration: 0.4s;
-    -o-transition-duration: 0.4s;
   }
   .CategoryFilter a:hover{
     color:#00BFA5;
@@ -317,10 +293,6 @@ input[type="email"]:focus{
   margin-left: -16px;
   margin-right:-16px;
   padding:5px;
-  transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
 }
 
 .Column .DataList .Item .TitleWrap a:hover{
@@ -334,10 +306,6 @@ input[type="email"]:focus{
 /* most recent by user */
 .Meta .LastDiscussionTitle a{
   color:#00796B;
-  transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
 }
 .Meta .LastDiscussionTitle a:hover{
   color:#00BFA5;
@@ -399,10 +367,6 @@ input[type="email"]:focus{
 
 .Discussion .Item-Header .AuthorWrap .Author a.Username{
    color:#FFCA28;
-   transition-duration: 0.4s;
-   -webkit-transition-duration: 0.4s;
-   -moz-transition-duration: 0.4s;
-   -o-transition-duration: 0.4s;
  }
  .Discussion .Item-Header .AuthorWrap .Author a.Username:hover{
    color:#FFD740;
@@ -453,10 +417,6 @@ input[type="email"]:focus{
 
  .CommentsWrap ul.MessageList li .Comment .Item-Header .AuthorWrap .Author a.Username{
      color:#00796B;
-     transition-duration: 0.4s;
-     -webkit-transition-duration: 0.4s;
-     -moz-transition-duration: 0.4s;
-     -o-transition-duration: 0.4s;
    }
 
    .CommentsWrap ul.MessageList li .Comment .Item-Header .AuthorWrap .Author a.Username:hover{
@@ -472,10 +432,6 @@ input[type="email"]:focus{
   .MessageForm .Buttons .Back a, /*  */
   .MessageForm .Buttons .Back .Bullet{
     color:#FFCA28;
-    transition-duration: 0.4s;
-    -webkit-transition-duration: 0.4s;
-    -moz-transition-duration: 0.4s;
-    -o-transition-duration: 0.4s;
   }
 
   .MessageForm .Buttons .Back a:hover{
@@ -487,10 +443,6 @@ input[type="email"]:focus{
     background-color: #FFCA28;
     border: none;
     box-shadow: 2px 2px 5px #000;
-    transition-duration: 0.4s;
-    -webkit-transition-duration: 0.4s;
-    -moz-transition-duration: 0.4s;
-    -o-transition-duration: 0.4s;
   }
 
    .MessageForm .Buttons a.Button:hover,
@@ -518,10 +470,6 @@ input[type="email"]:focus{
   background-color: #FFCA28;
   border: none;
   margin-right: 5px;
-  transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
 }
 
 .Column .FormWrapper form .Buttons .Button:hover{
@@ -535,9 +483,18 @@ input[type="email"]:focus{
 /* Higlighting for new message */
 .DataList .ItemContent .Meta .HasNew{
   background-color:#B2DFDB;
+  transition-duration: 0.4s;
 }
-/* change color for a tags */
 
+.DataList .ItemContent .Meta .MItem.Category a,
+.DataList .ItemContent .Meta .MItem.AddComment a{
+  color:#00796B;
+}
+
+.DataList .ItemContent .Meta .MItem.Category a:hover,
+.DataList .ItemContent .Meta .MItem.AddComment a:hover{
+  color: #00BFA5;
+}
 /* ==================================================
    Styling for activity page(s)
 ================================================== */
@@ -550,11 +507,60 @@ box-shadow: 2px 5px 7px #9E9E9E;
   box-shadow: 2px 2px 5px #000;
 }
 
+
 /* ==================================================
    User account page
 ================================================== */
 
+.Profile .DataListWrap .FormWrapper.FormWrapper-Condensed{
+  margin-bottom: 10px;
+}
 
+.ProfilePhotoLarge{
+  border-radius: 5px;
+}
+
+a.ChangePicture{
+border-top-right-radius:5px;
+border-top-left-radius:5px;
+}
+
+.Profile .DataListWrap form .Buttons input[type="submit"]{
+  box-shadow: 2px 2px 5px #000;
+}
+.ProfileOptions{
+  margin-right: 5px;
+  margin-top: 2px;
+}
+.ProfileOptions .NavButton{
+  background-color: #FFCA28;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 5px #000;
+}
+
+.ProfileOptions .NavButton:hover{
+  background-color: #ffffff;
+  color: #00796B;
+}
+
+.ProfileOptions .ButtonGroup ul.Dropdown.MenuItems li a{
+  background-color:#ffffff;
+}
+
+.ProfileOptions .ButtonGroup ul.Dropdown.MenuItems li a:hover{
+  background-color: #B2DFDB !important;
+  color:#000000 !important;
+}
+
+.Profile .User .About.P a{
+  color:#00796B;
+}
+
+.Profile .User .About.P a:hover{
+/*admin only, roles/register/ast IP*/
+  color: #00BFA5;
+}
 
 /* ==================================================
    Styling when user is not loged in
@@ -578,10 +584,6 @@ box-shadow: 2px 5px 7px #9E9E9E;
   border: none;
   margin-right: 5px;
   box-shadow: 2px 2px 5px #000;
-  transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
 }
 
 .Column .Box.GuestBox .P a.Button:hover{
@@ -589,14 +591,14 @@ box-shadow: 2px 5px 7px #9E9E9E;
   color:#00796B;
 }
 
+/*
+http://localhost:8888/CIT-480-L/vanilla/profile/comments/3/john_Doe
+*/
+
 /* styling for leaving a comment to a user response within a category */
 
 .Foot .Note a{
   color: #00796B;
-  transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
 }
 
 .Foot .Note a:hover{
@@ -630,3 +632,18 @@ box-shadow: 2px 5px 7px #9E9E9E;
 .Column .FormTitleWrapper .FormWrapper form#Form_User_Register ul li label.CheckBoxLabel{
   color:#ffffff;
 }
+
+/* ==================================================
+   Styling for New Mail Message page
+================================================== */
+
+#ConversationForm label{
+  color:#ffffff;
+}
+
+/*http://localhost:8888/CIT-480-L/vanilla/messages/inbox*/
+
+/* ==================================================
+   Notification Preferences
+   http://localhost:8888/CIT-480-L/vanilla/profile/preferences
+================================================== */
