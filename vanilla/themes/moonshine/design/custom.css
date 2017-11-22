@@ -40,15 +40,15 @@ body{
   margin: 0;
 }
 
-textarea{
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="email"]{
  border: none;
  border-radius: 5px;
 }
 
-textarea:focus{
- background-color: #ffffff;
-}
-
+textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus{
@@ -57,11 +57,24 @@ input[type="email"]:focus{
 
 a,
 input[type="submit"],
-li{
+li,
+input[type="file"]::-webkit-file-upload-button{
   transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s;
   -moz-transition-duration: 0.4s;
   -o-transition-duration: 0.4s;
+}
+
+.Meta .MItem a{
+  color:#00796B;
+}
+
+.Meta .MItem a:hover{
+  color:#00BFA5
+}
+
+.PhotoWrap img{
+  border-radius: 5px;
 }
 
 /* ==================================================
@@ -71,7 +84,7 @@ li{
   background-color:#00796B;
   border-bottom: 4px solid #FFCA28;
   color: #ffffff;
-  box-shadow: 2px 5px 7px #9E9E9E;
+  box-shadow: 0px 0px 15px #9E9E9E;
 }
 #Head a {
     color:  #FFCA28;
@@ -138,26 +151,31 @@ li{
 /* ==================================================
   User profile menu styling
 ================================================== */
-.MeBox{
+.MeBox,
+.UserBox /* Edit profile page*/
+{
  background-color:#00796B;
  padding: 10px;
  border-radius: 5px;
- box-shadow: 2px 5px 7px #9E9E9E;
+ box-shadow: 0px 0px 15px #9E9E9E;
 }
 
 .MeBox > a,
-.MeBox .WhoIs a.Username{
+.MeBox .WhoIs a.Username,
+.UserBox > a,
+.UserBox .WhoIs a.Username
+{
   color:#FFCA28;
 }
 
 .MeBox > a:hover,
-.MeBox .WhoIs a.Username:hover{
+.MeBox .WhoIs a.Username:hover,
+.UserBox > a:hover,
+.UserBox .WhoIs a.Username:hover{
   color:#ffffff;
 }
 
-.MeBox .PhotoWrap img{
-  border-radius: 5px;
-}
+
 .MeBox .MeMenu .ToggleFlyout > a{
   background-color:#e6e6e6;
   border-radius: 5px;
@@ -193,7 +211,7 @@ li{
   border-radius: 5px;
   background-color: #00796B;
   color:#ffffff;
-  box-shadow: 2px 5px 7px #9E9E9E;
+  box-shadow: 0px 0px 15px #9E9E9E;
 }
 .BigButton:hover{
   color:#FFCA28;
@@ -205,41 +223,57 @@ li{
    Side menu--styling Categorys/recent discuss/activity/My discuss
 ================================================== */
 .BoxFilter,
-.Box.BoxCategories/* styling for catergories list */{
-  background-color:#fff;
+.Box.BoxCategories,/* styling for catergories list */
+.Box.Group.SideMenu .PanelInfo
+{
+  background-color:#ffffff;
   border-radius: 5px;
   border: 2px solid #00796B;
   text-align: center;
-  box-shadow: 2px 5px 7px #9E9E9E;
+  box-shadow: 0px 0px 15px #9E9E9E;
 }
 .FilterMenu li,
-.Box.BoxCategories li{
+.Box.BoxCategories li,
+.PanelInfo li
+{
   color:#FFCA28;
   background-color: #ffffff;
 }
 .FilterMenu li:hover,
-.Box.BoxCategories li:hover{
+.Box.BoxCategories li:hover,
+.PanelInfo li:hover
+{
   background-color: #B2DFDB;
 }
 .FilterMenu a,
-.Box.BoxCategories a{
+.Box.BoxCategories a,
+.PanelInfo a{
   color:#000000;
 }
 /* styling for active setting */
 #Panel .FilterMenu .Active,
-.Box.BoxCategories .ClearFix.Depth1.Active{
+.Box.BoxCategories .ClearFix.Depth1.Active,
+.PanelInfo li.Popup.Active,
+.PanelInfo li.PictureLink.Active
+{
   color:#ffffff;
   background-color: #00796B;
 }
 
 #Panel .FilterMenu .Active a,
-.Box.BoxCategories .ClearFix.Depth1.Active a{
+.Box.BoxCategories .ClearFix.Depth1.Active a,
+.PanelInfo li.Popup.Active a,
+.PanelInfo li.PictureLink.Active a
+{
   color:#FFCA28;
   background-color: #00796B;
 }
 
 #Panel .FilterMenu .Active a:hover,
-.Box.BoxCategories .ClearFix.Depth1.Active a:hover{
+.Box.BoxCategories .ClearFix.Depth1.Active a:hover,
+.PanelInfo li.Popup.Active a:hover,
+.PanelInfo li.PictureLink.Active a:hover
+{
   color:#FFCA28;
   background-color: #00796B;
 }
@@ -251,7 +285,7 @@ li{
   border-radius: 5px;
   border: 2px solid #00796B;
   text-align: center;
-  box-shadow: 2px 5px 7px #9E9E9E;
+  box-shadow: 0px 0px 15px #9E9E9E;
 }
   .CategoryFilter a{
     color:#00796B;
@@ -274,7 +308,7 @@ li{
   border-radius: 5px;
   padding: 5px;
   margin-bottom: 10px;
-  box-shadow: 2px 5px 7px #9E9E9E;
+  box-shadow: 0px 0px 15px #9E9E9E;
 }
 /* Categorory divs */
 .Column .DataList .Item{
@@ -282,7 +316,7 @@ li{
   border-radius: 5px;
   padding: 15px;
   margin-bottom: 10px;
-  box-shadow: 2px 5px 7px #9E9E9E;
+  box-shadow: 0px 0px 15px #9E9E9E;
   border: 2px solid #00796B;
 }
 /* forum Categorys headers */
@@ -331,20 +365,12 @@ li{
    background-color:#00796B;
  }
 
- .DataList .ItemContent .Meta .MItem.LastCommentBy a{
-   color: #00796B;
- }
-
- .DataList .ItemContent .Meta .MItem.LastCommentBy a:hover{
-   color: #00BFA5;
- }
-
  .DataList span.Options .ToggleFlyout .OptionsTitle{
    margin-top: 0px;
  }
 
  /* ==================================================
-    styling for leaving a comment to a user response within a category
+    styling for leaving a comment response within a category
  ================================================== */
 
 /* Add styling for header */
@@ -362,7 +388,7 @@ li{
    color:#ffffff;
    padding: 5px;
    border-radius: 5px;
-   box-shadow: 2px 5px 7px #9E9E9E;
+   box-shadow: 0px 0px 15px #9E9E9E;
  }
 
 .Discussion .Item-Header .AuthorWrap .Author a.Username{
@@ -381,17 +407,11 @@ li{
  .Discussion .Item-Header .Meta .MItem.IPAddress{
    display: none;
  }
-   /* Add border to profile images */
-  .MessageList .Item .Discussion .Item-Header .AuthorWrap .Author a img,
-  .CommentsWrap ul.MessageList li .Comment .Item-Header .AuthorWrap .Author a img,
-  .MessageForm .CommentFormWrap .Author a img{
-    border-radius: 5px;
-  }
 
   .CommentFormWrap .Form-BodyWrap{
     background-color: #00796B;
     border-radius: 5px;
-    box-shadow: 2px 5px 7px #9E9E9E;
+    box-shadow: 0px 0px 15px #9E9E9E;
   }
 
   /* Styling for "Comments" header */
@@ -401,7 +421,7 @@ li{
     border-radius: 5px;
     padding: 5px;
     margin-bottom: 10px;
-    box-shadow: 2px 5px 7px #9E9E9E;
+    box-shadow: 0px 0px 15px #9E9E9E;
   }
   /* Styling for new comments */
 
@@ -450,6 +470,10 @@ li{
     background-color:#fff;
     color:#00796B;
 }
+/* fixes conflicting issue with  notification preferences */
+.MessageForm .CommentFormWrap form#Form_Comment{
+  box-shadow:none;
+}
 
 /* ==================================================
    styling for New Dicussion
@@ -483,24 +507,14 @@ li{
 /* Higlighting for new message */
 .DataList .ItemContent .Meta .HasNew{
   background-color:#B2DFDB;
-  transition-duration: 0.4s;
 }
 
-.DataList .ItemContent .Meta .MItem.Category a,
-.DataList .ItemContent .Meta .MItem.AddComment a{
-  color:#00796B;
-}
-
-.DataList .ItemContent .Meta .MItem.Category a:hover,
-.DataList .ItemContent .Meta .MItem.AddComment a:hover{
-  color: #00BFA5;
-}
 /* ==================================================
    Styling for activity page(s)
 ================================================== */
 .Column .ActivityFormWrap .FormWrapper{
 margin-bottom: 20px;
-box-shadow: 2px 5px 7px #9E9E9E;
+box-shadow: 0px 0px 15px #9E9E9E;
 }
 
 .Column .ActivityFormWrap .FormWrapper .Buttons input.Button{
@@ -514,6 +528,7 @@ box-shadow: 2px 5px 7px #9E9E9E;
 
 .Profile .DataListWrap .FormWrapper.FormWrapper-Condensed{
   margin-bottom: 10px;
+  box-shadow: 0px 0px 15px #9E9E9E;
 }
 
 .ProfilePhotoLarge{
@@ -530,11 +545,13 @@ border-top-left-radius:5px;
 }
 .ProfileOptions{
   margin-right: 5px;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 .ProfileOptions .NavButton{
   background-color: #FFCA28;
-  border-radius: 5px;
+  border-radius: 2px;
+  padding:3px;
+  margin-right: 5px;
   border: none;
   box-shadow: 2px 2px 5px #000;
 }
@@ -591,10 +608,6 @@ border-top-left-radius:5px;
   color:#00796B;
 }
 
-/*
-http://localhost:8888/CIT-480-L/vanilla/profile/comments/3/john_Doe
-*/
-
 /* styling for leaving a comment to a user response within a category */
 
 .Foot .Note a{
@@ -615,7 +628,7 @@ http://localhost:8888/CIT-480-L/vanilla/profile/comments/3/john_Doe
 
 
 .Column .FormTitleWrapper .FormWrapper{
-  box-shadow: 2px 5px 7px #9E9E9E;
+  box-shadow: 0px 0px 15px #9E9E9E;
 }
 
 .Column .FormTitleWrapper .FormWrapper form#Form_User_Register ul li.Buttons .Button{
@@ -640,10 +653,66 @@ http://localhost:8888/CIT-480-L/vanilla/profile/comments/3/john_Doe
 #ConversationForm label{
   color:#ffffff;
 }
+#ConversationForm .Buttons a.Button.Cancel{
+  box-shadow: 2px 2px 5px #000;
+}
 
-/*http://localhost:8888/CIT-480-L/vanilla/messages/inbox*/
+/* ==================================================
+   Styling  Inbox page
+================================================== */
+/* remove small new message button from inbox page */
+
+.PageControls .BoxButtons a{
+ display: none;
+}
 
 /* ==================================================
    Notification Preferences
    http://localhost:8888/CIT-480-L/vanilla/profile/preferences
 ================================================== */
+
+.ProfileOptions .ProfileButtons{
+  color:#FFCA28;
+}
+
+/*font color for email addres in Userbox*/
+.UserBox .WhoIs .Email{
+  color:#ffffff;
+}
+
+ #Content .FormTitleWrapper form{
+  box-shadow: 0px 0px 15px #9E9E9E;
+  border-radius: 5px;
+}
+
+.FormTitleWrapper form .Buttons input#Form_ChangePassword,
+.FormTitleWrapper form .Buttons input#Form_Save,
+.FormTitleWrapper form .Buttons input#Form_SavePreferences,
+.FormTitleWrapper form .Buttons input#Form_Upload
+{
+  background-color: #00796B;
+  color: #ffffff;
+  padding:10px;
+  border: none;
+  box-shadow: 2px 2px 5px #9E9E9E;
+}
+
+input[type="file"]::-webkit-file-upload-button{
+  background-color: #00796B;
+  color: #ffffff;
+  padding:10px;
+  border: none;
+  box-shadow: 2px 2px 5px #9E9E9E;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.FormTitleWrapper form .Buttons input#Form_ChangePassword:hover,
+.FormTitleWrapper form .Buttons input#Form_Save:hover,
+.FormTitleWrapper form .Buttons input#Form_SavePreferences:hover,
+.FormTitleWrapper form .Buttons input#Form_Upload:hover,
+ input[type="file"]::-webkit-file-upload-button:hover{
+  color:#FFCA28;
+  background-color: #00695C;
+}
