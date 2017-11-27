@@ -345,10 +345,20 @@ input[type="file"]::-webkit-file-upload-button{
   color:#00BFA5;
 }
 
-/* gear icon placement(only for root user) */
+/* gear icon  
+placement(only for root user) */
   ul li .Options .ToggleFlyout .OptionsTitle{
   margin-top: 5px;
   }
+  .Options .ToggleFlyout ul li a{
+    background-color:#ffffff !important;
+  }
+
+  .Options .ToggleFlyout ul li a:hover{
+    background-color: #B2DFDB !important;
+    color:#000000 !important;
+  }
+
   /* ==================================================
      styling for user responses within a category
   ================================================== */
@@ -680,10 +690,10 @@ border-top-left-radius:5px;
   color:#ffffff;
 }
 
- #Content .FormTitleWrapper form{
+ /*#Content .FormTitleWrapper form{
   box-shadow: 0px 0px 15px #9E9E9E;
   border-radius: 5px;
-}
+}*/
 
 .FormTitleWrapper form .Buttons input#Form_ChangePassword,
 .FormTitleWrapper form .Buttons input#Form_Save,
@@ -713,6 +723,39 @@ input[type="file"]::-webkit-file-upload-button{
 .FormTitleWrapper form .Buttons input#Form_SavePreferences:hover,
 .FormTitleWrapper form .Buttons input#Form_Upload:hover,
  input[type="file"]::-webkit-file-upload-button:hover{
+  color:#FFCA28;
+  background-color: #00695C;
+}
+
+/* ==================================================
+    pop up dialog boexs
+================================================== */
+
+/* sign in dialog box */
+/* green border abount input fields */
+
+.Entry .MainForm input.InputBox{
+  border: 2px solid #00796B;
+}
+
+.Entry .MainForm a.ForgotPassword,
+.CreateAccount a{
+  color:#00796B;
+}
+
+.Entry .MainForm a.ForgotPassword:hover,
+.CreateAccount a:hover{
+  color:#00BFA5;
+}
+
+form#Form_User_SignIn .Buttons input.Button{
+  background-color:#00796B;
+  color:#ffffff;
+  box-shadow: 2px 2px 5px #9E9E9E;
+  border: none;
+}
+
+form#Form_User_SignIn .Buttons input.Button:hover{
   color:#FFCA28;
   background-color: #00695C;
 }
