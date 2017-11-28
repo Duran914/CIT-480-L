@@ -27,6 +27,10 @@
 /* ==================================================
   Global varibles
 ================================================== */
+
+* {
+ box-sizing: border-box;
+}
 h1, h2, h3, h4, h5, h6{
     font-family: 'Comfortaa', roboto;
     font-weight: bold;
@@ -38,7 +42,23 @@ body{
   font-family: 'Comfortaa', roboto;
   background-color: #f2f2f2;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+#Frame{
+  padding-bottom: 5%;
+}
+
+/*#Panel{
+  margin-top: -72%;
+  margin-left: 10%;
+}
+
+#Content{
+  margin-right: 5%;
+}*/
 
 textarea,
 input[type="text"],
@@ -58,6 +78,7 @@ input[type="email"]:focus{
 a,
 input[type="submit"],
 li,
+i,
 input[type="file"]::-webkit-file-upload-button{
   transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s;
@@ -86,6 +107,7 @@ input[type="file"]::-webkit-file-upload-button{
   color: #ffffff;
   box-shadow: 0px 0px 15px #9E9E9E;
 }
+
 #Head a {
     color:  #FFCA28;
     font-weight: bold;
@@ -140,10 +162,12 @@ input[type="file"]::-webkit-file-upload-button{
 .BreadcrumbsWrapper{
   margin-top: 10px;
 }
+
 .BreadcrumbsWrapper .Breadcrumbs span a{
   font-size: 15px;
   color: #00796B;
 }
+
 .BreadcrumbsWrapper .Breadcrumbs span a:hover{
   color:#00BFA5;
 }
@@ -163,8 +187,7 @@ input[type="file"]::-webkit-file-upload-button{
 .MeBox > a,
 .MeBox .WhoIs a.Username,
 .UserBox > a,
-.UserBox .WhoIs a.Username
-{
+.UserBox .WhoIs a.Username{
   color:#FFCA28;
 }
 
@@ -187,10 +210,12 @@ input[type="file"]::-webkit-file-upload-button{
 .MeBox .MeMenu .ToggleFlyout > a:hover{
       background-color:#FFCA28;
 }
+
 /* Me box pop down menu styling */
 .MeBox .MeMenu .ToggleFlyout .Flyout ul li a{
   color:#00796B;
 }
+
 .MeBox .MeMenu .ToggleFlyout .Flyout ul li a:hover{
   color:#00BFA5;
 }
@@ -213,6 +238,7 @@ input[type="file"]::-webkit-file-upload-button{
   color:#ffffff;
   box-shadow: 0px 0px 15px #9E9E9E;
 }
+
 .BigButton:hover{
   color:#FFCA28;
   background-color: #00695C;
@@ -224,38 +250,38 @@ input[type="file"]::-webkit-file-upload-button{
 ================================================== */
 .BoxFilter,
 .Box.BoxCategories,/* styling for catergories list */
-.Box.Group.SideMenu .PanelInfo
-{
+.Box.Group.SideMenu .PanelInfo{
   background-color:#ffffff;
   border-radius: 5px;
   border: 2px solid #00796B;
   text-align: center;
   box-shadow: 0px 0px 15px #9E9E9E;
 }
+
 .FilterMenu li,
 .Box.BoxCategories li,
-.PanelInfo li
-{
+.PanelInfo li{
   color:#FFCA28;
   background-color: #ffffff;
 }
+
 .FilterMenu li:hover,
 .Box.BoxCategories li:hover,
-.PanelInfo li:hover
-{
+.PanelInfo li:hover{
   background-color: #B2DFDB;
 }
+
 .FilterMenu a,
 .Box.BoxCategories a,
 .PanelInfo a{
   color:#000000;
 }
+
 /* styling for active setting */
 #Panel .FilterMenu .Active,
 .Box.BoxCategories .ClearFix.Depth1.Active,
 .PanelInfo li.Popup.Active,
-.PanelInfo li.PictureLink.Active
-{
+.PanelInfo li.PictureLink.Active{
   color:#ffffff;
   background-color: #00796B;
 }
@@ -263,8 +289,7 @@ input[type="file"]::-webkit-file-upload-button{
 #Panel .FilterMenu .Active a,
 .Box.BoxCategories .ClearFix.Depth1.Active a,
 .PanelInfo li.Popup.Active a,
-.PanelInfo li.PictureLink.Active a
-{
+.PanelInfo li.PictureLink.Active a{
   color:#FFCA28;
   background-color: #00796B;
 }
@@ -272,8 +297,7 @@ input[type="file"]::-webkit-file-upload-button{
 #Panel .FilterMenu .Active a:hover,
 .Box.BoxCategories .ClearFix.Depth1.Active a:hover,
 .PanelInfo li.Popup.Active a:hover,
-.PanelInfo li.PictureLink.Active a:hover
-{
+.PanelInfo li.PictureLink.Active a:hover{
   color:#FFCA28;
   background-color: #00796B;
 }
@@ -287,9 +311,11 @@ input[type="file"]::-webkit-file-upload-button{
   text-align: center;
   box-shadow: 0px 0px 15px #9E9E9E;
 }
+
   .CategoryFilter a{
     color:#00796B;
   }
+
   .CategoryFilter a:hover{
     color:#00BFA5;
 }
@@ -310,6 +336,7 @@ input[type="file"]::-webkit-file-upload-button{
   margin-bottom: 10px;
   box-shadow: 0px 0px 15px #9E9E9E;
 }
+
 /* Categorory divs */
 .Column .DataList .Item{
   background-color: #ffffff;
@@ -319,6 +346,7 @@ input[type="file"]::-webkit-file-upload-button{
   box-shadow: 0px 0px 15px #9E9E9E;
   border: 2px solid #00796B;
 }
+
 /* forum Categorys headers */
 .Column .DataList .Item .TitleWrap a{
   color: #ffffff;
@@ -337,19 +365,22 @@ input[type="file"]::-webkit-file-upload-button{
 .Column .DataList .Item .Meta img{
   display:none;
 }
+
 /* most recent by user */
 .Meta .LastDiscussionTitle a{
   color:#00796B;
 }
+
 .Meta .LastDiscussionTitle a:hover{
   color:#00BFA5;
 }
 
-/* gear icon  
+/* gear icon
 placement(only for root user) */
   ul li .Options .ToggleFlyout .OptionsTitle{
   margin-top: 5px;
   }
+
   .Options .ToggleFlyout ul li a{
     background-color:#ffffff !important;
   }
@@ -404,6 +435,7 @@ placement(only for root user) */
 .Discussion .Item-Header .AuthorWrap .Author a.Username{
    color:#FFCA28;
  }
+
  .Discussion .Item-Header .AuthorWrap .Author a.Username:hover{
    color:#FFD740;
  }
@@ -492,6 +524,7 @@ placement(only for root user) */
   background-color: #00796B;
   border-radius: 5px;
 }
+
 .Column .FormWrapper form .P label{
   color:#fff;
 }
@@ -553,10 +586,12 @@ border-top-left-radius:5px;
 .Profile .DataListWrap form .Buttons input[type="submit"]{
   box-shadow: 2px 2px 5px #000;
 }
+
 .ProfileOptions{
   margin-right: 5px;
   margin-top: 4px;
 }
+
 .ProfileOptions .NavButton{
   background-color: #FFCA28;
   border-radius: 2px;
@@ -663,6 +698,7 @@ border-top-left-radius:5px;
 #ConversationForm label{
   color:#ffffff;
 }
+
 #ConversationForm .Buttons a.Button.Cancel{
   box-shadow: 2px 2px 5px #000;
 }
@@ -684,22 +720,28 @@ border-top-left-radius:5px;
 .ProfileOptions .ProfileButtons{
   color:#FFCA28;
 }
+.ProfileOptions .ProfileButtons:hover{
+  color:#ffffff;
+}
 
 /*font color for email addres in Userbox*/
 .UserBox .WhoIs .Email{
   color:#ffffff;
 }
 
- /*#Content .FormTitleWrapper form{
+ .Dashboard.Profile .Column .FormTitleWrapper form{
   box-shadow: 0px 0px 15px #9E9E9E;
   border-radius: 5px;
-}*/
+}
+
+.Dashboard.Profile #Panel .PanelInfo li{
+  text-align: center;
+}
 
 .FormTitleWrapper form .Buttons input#Form_ChangePassword,
 .FormTitleWrapper form .Buttons input#Form_Save,
 .FormTitleWrapper form .Buttons input#Form_SavePreferences,
-.FormTitleWrapper form .Buttons input#Form_Upload
-{
+.FormTitleWrapper form .Buttons input#Form_Upload{
   background-color: #00796B;
   color: #ffffff;
   padding:10px;
@@ -759,3 +801,95 @@ form#Form_User_SignIn .Buttons input.Button:hover{
   color:#FFCA28;
   background-color: #00695C;
 }
+
+/* ==================================================
+     FOOTER styleing
+================================================== */
+
+footer.foot{
+  background-color: #00796B;
+  padding: 15px;
+  margin: auto auto 0 auto;
+  width: 100%;
+}
+
+.foot .footerText{
+  color:#FFCA28;
+  opacity: 0.8;
+}
+
+/* font awesome icons */
+.foot i.fa{
+  float:right;
+  font-size: 25px;
+  color:#e6e6e6;
+  padding-left: 7px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.foot i.fa:hover{
+  color:#FFCA28;
+  opacity: 1;
+}
+/* ==================================================
+            MEDIA QUIRES
+================================================== */
+ @media(max-width:990px){
+   .Row{
+     width: 100%;
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+   }
+
+   .Row:after{
+     display: table;
+     clear: both;
+     content: "";
+   }
+
+   /* ============================
+              THE GRID
+   ==============================*/
+
+   .col-1 {width: 8.33%;}
+   .col-2 {width: 16.66%;}
+   .col-3 {width: 25%;}
+   .col-4 {width: 33.33%;}
+   .col-5 {width: 41.66%;}
+   .col-6 {width: 50%;}
+   .col-7 {width: 58.33%;}
+   .col-8 {width: 66.66%;}
+   .col-9 {width: 75%;}
+   .col-10 {width: 83.33%;}
+   .col-11 {width: 91.66%;}
+   .col-12 {width: 100%;}
+
+   .SiteMenu,
+   .SiteSearch .InputBox, .SiteSearch .Button{
+     display: none;
+   }
+
+   /*.container{
+     width: 100%;
+     margin: auto;
+     padding-top: 4%;
+     padding-bottom: 4%;
+   }*/
+
+   #Content,
+   #Panel{
+     float: right;
+     margin: 0;
+     padding: 20px;
+     width: 100%;
+   }
+
+   .col-4,
+   .col-8{
+     width: 100%;
+     margin: 0;
+     padding: 10px;
+   }
+ }

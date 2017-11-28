@@ -3,6 +3,8 @@
 <head>
     {asset name="Head"}
   <link rel="stylesheet" type="text/css" href="custom.css">
+  <meta name="viewport" content="width=device-width">
+  <script src="https://use.fontawesome.com/c5b9554837.js"></script>
 </head>
 <body id="{$BodyID}" class="{$BodyClass}">
 
@@ -25,19 +27,36 @@
     </div>
     <div id="Body">
         <div class="Row">
+          <div class="col-6">
             <div class="BreadcrumbsWrapper">{breadcrumbs}</div>
+          </div>
+        </div>
+        <!-- <div class="container"> -->
+        <div class="Row">
+          <div class="col-4">
             <div class="Column PanelColumn" id="Panel">
                 {module name="MeModule"}
                 {asset name="Panel"}
-            </div>
+                </div>
+              </div>
+              <div class="col-8">
             <div class="Column ContentColumn" id="Content">{asset name="Content"}</div>
+          <!-- </div> -->
+           </div>
+         </div>
+         </div>
         </div>
-    </div>
-    <div id="Foot">
-        <p>Im am the Footer </p>
-
     </div>
 </div>
 {event name="AfterBody"}
+<footer class="foot">
+    <span class="footerText">MoonShine Systems Copyright &copy 2017. All Rights Reserved</span>
+    <span class="socialMedia">
+     <i class="fa fa-facebook-official" aria-hidden="true"></i>
+     <i class="fa fa-instagram" aria-hidden="true"></i>
+     <i class="fa fa-twitter" aria-hidden="true"></i>
+     <i class="fa fa-google-plus" aria-hidden="true"></i>
+    </span>
+</footer>
 </body>
 </html>
