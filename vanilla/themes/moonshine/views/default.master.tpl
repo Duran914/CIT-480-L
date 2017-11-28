@@ -21,8 +21,10 @@
                 <!-- {inbox_link} -->
                 {profile_link}
                {signinout_link}
-               <!-- <li><a href="#">&#9776</a></li> -->
             </ul>
+             <!-- <div class="toggle-responsive">
+            <span id="Bar_Menu" class="ResponsiveMenu"><i class="fa fa-2x fa-bars" aria-hidden="true"></i></span>
+          </div> -->
         </div>
     </div>
     <div id="Body">
@@ -33,13 +35,13 @@
         </div>
         <!-- <div class="container"> -->
         <div class="Row">
-          <div class="col-4">
+          <div class="col-2">
             <div class="Column PanelColumn" id="Panel">
                 {module name="MeModule"}
                 {asset name="Panel"}
                 </div>
               </div>
-              <div class="col-8">
+              <div class="col-10">
             <div class="Column ContentColumn" id="Content">{asset name="Content"}</div>
           <!-- </div> -->
            </div>
@@ -58,5 +60,19 @@
      <i class="fa fa-google-plus" aria-hidden="true"></i>
     </span>
 </footer>
+<!--
+{literal}
+<script type="text/javascript">
+$(document).ready(function(){
+  $('#Bar_Menu').click(function(){
+    $('ul').toggleClass('active');
+    $('#menu').toggleClass('activeMenu');
+  });
+});
+</script>
+{/literal}
+ -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 </body>
 </html>

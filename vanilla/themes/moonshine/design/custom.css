@@ -125,7 +125,6 @@ input[type="file"]::-webkit-file-upload-button{
     font-size: 50px;
     font-family: 'Comfortaa', fantasy;
     text-shadow: 1px 1px #000;
-
 }
 
 /* ==================================================
@@ -153,6 +152,12 @@ input[type="file"]::-webkit-file-upload-button{
 .SiteMenu{
   float:right;
   margin-top: 55px;
+}
+/* Hamburger menu */
+span.ResponsiveMenu{
+  display: inline;
+  /*margin-left: 10px;*/
+  cursor: pointer;
 }
 
 
@@ -836,18 +841,6 @@ footer.foot{
             MEDIA QUIRES
 ================================================== */
  @media(max-width:990px){
-   .Row{
-     width: 100%;
-     display: flex;
-     flex-wrap: wrap;
-     align-items: center;
-   }
-
-   .Row:after{
-     display: table;
-     clear: both;
-     content: "";
-   }
 
    /* ============================
               THE GRID
@@ -866,9 +859,27 @@ footer.foot{
    .col-11 {width: 91.66%;}
    .col-12 {width: 100%;}
 
-   .SiteMenu,
-   .SiteSearch .InputBox, .SiteSearch .Button{
+
+   .SiteSearch .InputBox,
+   .SiteMenu li,
+   #Form_Go,
+   .SiteMenu li.SignOut
+  {
+    text-align: center;
+     width: 100%;
      display: none;
+     overflow: hidden;
+   }
+
+#Frame{
+  overflow: hidden;
+}
+   #Panel, #Content{
+     padding-left: 5%;
+     /*float: right;
+     margin: 0;
+     padding: 20px;
+     width: 100%;*/
    }
 
    /*.container{
@@ -878,18 +889,65 @@ footer.foot{
      padding-bottom: 4%;
    }*/
 
-   #Content,
+   /*#Content,
    #Panel{
      float: right;
      margin: 0;
      padding: 20px;
      width: 100%;
-   }
-
+   }*/
+/*
    .col-4,
    .col-8{
      width: 100%;
      margin: 0;
      padding: 10px;
    }
- }
+ }*/
+
+  @media(max-width:816px){
+
+    .Column .FilterMenu,
+    .Column .CategoryFilterTitle,
+    .Column .CategoryFilter,
+    .Column .CategoryFilterOptions,
+    .Column .BoxFilter,
+    .Column .Box.BoxCategories{
+      display: none;
+      border-top: none;
+    }
+
+    #Head .SiteTitle a {
+        font-size: 30px;
+    }
+    #logo{
+      width:55px;
+      margin-bottom: -3px;
+    }
+
+    #Content,
+    #Panel{
+      float: right;
+      margin: 0;
+      padding: 20px;
+      width: 100%;
+    }
+    .Row{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .Row:after{
+      display: table;
+      clear: both;
+      content: "";
+    }
+    .col-2,
+    .col-10{
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+    }
+}
