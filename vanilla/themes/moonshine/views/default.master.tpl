@@ -10,26 +10,21 @@
 
 <div id="Frame">
     <div class="Head" id="Head">
-        <div class="Row">   <!--http://collegevault.com/wp-content/uploads/2014/11/Little_Brown_Jug_2.png-->
+        <div class="row">   <!--http://collegevault.com/wp-content/uploads/2014/11/Little_Brown_Jug_2.png-->
             <img id="logo" src="http://www.clker.com/cliparts/d/C/V/s/q/D/oktoberfest-beer-mug.svg" alt="">
             <strong class="SiteTitle"><a href="{link path="/"}">{logo}</a></strong>
-
-            <div class="SiteSearch">{searchbox}</div>
+            <!-- <div class="SiteSearch">{searchbox}</div> -->
             <ul class="SiteMenu">
-                <!-- {dashboard_link} -->
-
-                <!-- {inbox_link} -->
+                 <!-- {dashboard_link} -->
+                {inbox_link}
                 {profile_link}
                {signinout_link}
             </ul>
-             <!-- <div class="toggle-responsive">
-            <span id="Bar_Menu" class="ResponsiveMenu"><i class="fa fa-2x fa-bars" aria-hidden="true"></i></span>
-          </div> -->
         </div>
     </div>
     <div id="Body">
         <div class="Row">
-          <div class="col-6">
+          <div class="col-12">
             <div class="BreadcrumbsWrapper">{breadcrumbs}</div>
           </div>
         </div>
@@ -60,19 +55,5 @@
      <i class="fa fa-google-plus" aria-hidden="true"></i>
     </span>
 </footer>
-<!--
-{literal}
-<script type="text/javascript">
-$(document).ready(function(){
-  $('#Bar_Menu').click(function(){
-    $('ul').toggleClass('active');
-    $('#menu').toggleClass('activeMenu');
-  });
-});
-</script>
-{/literal}
- -->
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"
-   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 </body>
 </html>

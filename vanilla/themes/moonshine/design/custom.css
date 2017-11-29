@@ -154,11 +154,14 @@ input[type="file"]::-webkit-file-upload-button{
   margin-top: 55px;
 }
 /* Hamburger menu */
-span.ResponsiveMenu{
-  display: inline;
-  /*margin-left: 10px;*/
+/*#Head span.Responsive .DropdownMenu{
+  margin-top: 30px;
+  margin-right: 20px;
   cursor: pointer;
-}
+  float: right;
+  font-size: 40px;
+  display: none;
+}*/
 
 
 /* ==================================================
@@ -859,16 +862,8 @@ footer.foot{
    .col-11 {width: 91.66%;}
    .col-12 {width: 100%;}
 
-
-   .SiteSearch .InputBox,
-   .SiteMenu li,
-   #Form_Go,
-   .SiteMenu li.SignOut
-  {
-    text-align: center;
-     width: 100%;
-     display: none;
-     overflow: hidden;
+   .BreadcrumbsWrapper{
+     margin-left: 10px;
    }
 
 #Frame{
@@ -905,7 +900,33 @@ footer.foot{
    }
  }*/
 
+.Column .H{
+  margin-top: -40px;
+}
+.Column .CommentsWrap ul.MessageList li{
+  width: 95%;
+}
+
+.Column .CommentsWrap ul{
+  margin-bottom: 60px;
+}
+
+ }
+
   @media(max-width:816px){
+
+    #Head .SiteTitle a{
+      text-align: center;
+      font-size: 30px;
+    }
+
+    .SiteMenu{
+    margin-top: 35px;
+  }
+
+    .BreadcrumbsWrapper{
+      margin-left: 30px;
+    }
 
     .Column .FilterMenu,
     .Column .CategoryFilterTitle,
@@ -917,9 +938,7 @@ footer.foot{
       border-top: none;
     }
 
-    #Head .SiteTitle a {
-        font-size: 30px;
-    }
+
     #logo{
       width:55px;
       margin-bottom: -3px;
@@ -927,7 +946,7 @@ footer.foot{
 
     #Content,
     #Panel{
-      float: right;
+      /*float: right;*/
       margin: 0;
       padding: 20px;
       width: 100%;
@@ -950,4 +969,10 @@ footer.foot{
       margin: 0;
       padding: 10px;
     }
-}
+  }
+
+  @media(max-width:555px){
+    .SiteMenu{
+    display: none;
+   }
+  }
