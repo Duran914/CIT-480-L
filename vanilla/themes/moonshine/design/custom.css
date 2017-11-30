@@ -63,7 +63,8 @@ body{
 textarea,
 input[type="text"],
 input[type="password"],
-input[type="email"]{
+input[type="email"],
+.token-input-list{
  border: none;
  border-radius: 5px;
 }
@@ -77,6 +78,7 @@ input[type="email"]:focus{
 
 a,
 input[type="submit"],
+input[type="button"],
 li,
 i,
 input[type="file"]::-webkit-file-upload-button{
@@ -152,7 +154,9 @@ input[type="file"]::-webkit-file-upload-button{
 .SiteMenu{
   float:right;
   margin-top: 55px;
+  margin-right: 5px;
 }
+
 /* Hamburger menu */
 /*#Head span.Responsive .DropdownMenu{
   margin-top: 30px;
@@ -162,8 +166,6 @@ input[type="file"]::-webkit-file-upload-button{
   font-size: 40px;
   display: none;
 }*/
-
-
 /* ==================================================
   Breadcrum menu
 ================================================== */
@@ -545,7 +547,9 @@ placement(only for root user) */
   background-color: #FFCA28;
   border: none;
   margin-right: 5px;
+  box-shadow: 2px 2px 5px #000;
 }
+
 
 .Column .FormWrapper form .Buttons .Button:hover{
   background-color:#ffffff;
@@ -643,6 +647,7 @@ border-top-left-radius:5px;
   color: #ffffff;
   padding:5px;
   border-radius: 5px;
+  box-shadow: 0px 0px 15px #9E9E9E;
 }
 
 .Column .Box.GuestBox h4{
@@ -707,7 +712,7 @@ border-top-left-radius:5px;
   color:#ffffff;
 }
 
-#ConversationForm .Buttons a.Button.Cancel{
+#ConversationForm .Buttons .Button{
   box-shadow: 2px 2px 5px #000;
 }
 
@@ -798,14 +803,18 @@ input[type="file"]::-webkit-file-upload-button{
   color:#00BFA5;
 }
 
-form#Form_User_SignIn .Buttons input.Button{
+form#Form_User_SignIn .Buttons input.Button,
+.Buttons.Footer input /* dialog box for deleting comment in Discussion page */
+{
   background-color:#00796B;
   color:#ffffff;
   box-shadow: 2px 2px 5px #9E9E9E;
   border: none;
 }
 
-form#Form_User_SignIn .Buttons input.Button:hover{
+form#Form_User_SignIn .Buttons input.Button:hover,
+.Buttons.Footer input:hover /* dialog box for deleting comment in Discussion page */
+{
   color:#FFCA28;
   background-color: #00695C;
 }
@@ -871,52 +880,58 @@ footer.foot{
 }
    #Panel, #Content{
      padding-left: 5%;
-     /*float: right;
-     margin: 0;
-     padding: 20px;
-     width: 100%;*/
    }
 
-   /*.container{
-     width: 100%;
-     margin: auto;
-     padding-top: 4%;
-     padding-bottom: 4%;
-   }*/
-
-   /*#Content,
-   #Panel{
-     float: right;
-     margin: 0;
-     padding: 20px;
-     width: 100%;
-   }*/
-/*
-   .col-4,
-   .col-8{
-     width: 100%;
-     margin: 0;
-     padding: 10px;
+   /* edit profile page Change profile picture(hover over image) */
+   .Photo.PhotoWrap.PhotoWrapLarge .ChangePicture{
+     width: 104%;
    }
- }*/
+   .Column .CommentsWrap ul.MessageList li{
+     width: 95%;
+   }
 
-.Column .H{
-  margin-top: -40px;
-}
-.Column .CommentsWrap ul.MessageList li{
-  width: 95%;
-}
+   .Column .CommentsWrap ul{
+     margin-bottom: 60px;
+   }
 
-.Column .CommentsWrap ul{
-  margin-bottom: 60px;
-}
+   #Form_Comment .Buttons #Form_PostComment{
+     margin-left: 1%;
+   }
+
+   /* Leaving a comment in Discussion page,  button for Post Comment  */
+   .CommentFormWrap #Form_Comment .CommentButton{
+     margin-top: 10px;
+     margin-right: 35px;
+   }
 
  }
 
-  @media(max-width:816px){
+ @media(max-width:815px){
+  #Content{
+     padding-left: 0%;
+     width: 60%
+   }
+   .Preferences div{
+     overflow: scroll;
+   }
+ }
+
+  @media(max-width:752px){
+
+    #Head,
+    #Content,
+    .Box.GuestBox /* Welcome messages for user not loged-in */
+    {
+      text-align: center;
+    }
+    .MessageList .Discussion,
+    .CommentsWrap .DataBox div:not(:nth-child(0)),
+    .Profile ul.DataList
+    {
+      text-align: left;
+    }
 
     #Head .SiteTitle a{
-      text-align: center;
       font-size: 30px;
     }
 
@@ -969,10 +984,102 @@ footer.foot{
       margin: 0;
       padding: 10px;
     }
+
+    .Column .H{
+      margin-top: -40px;
+    }
+
+    .ProfileOptions{
+      margin-top: -35px;
+      font-size: 10px;
+    }
+
+    .MessageList .PageTitle{
+      margin-top: -40px;
+    }
+    /* Create New Discussion page (radio Buttons) */
+    .Column .FormWrapper form .P .List.Inline.PostOptions ul li{
+      display: block;
+    }
+    .Column .FormWrapper form .P .List.Inline ul li b{
+      display: inline-block;
+    }
+
+    /*.DiscussionForm .FormWrapper .Buttons{
+      display: block;
+    }*/
+    /* Profile papge */
+    .Profile .DataListWrap{
+      margin-top: 50px;
+    }
+
+    .Photo.PhotoWrap.PhotoWrapLarge img{
+      width: 20%;
+    }
+    /* edit profile page Change profile picture(hover over image) */
+    .Photo.PhotoWrap.PhotoWrapLarge .ChangePicture{
+      width: 20%;
+    }
+
+    /*  */
+    #Form_Comment .Buttons{
+      text-align: center;
+      margin-right: 5%;
+    }
+
+    .Buttons .Button{
+      text-align: center;
+      margin-top: 2%;
+      width: 100%;
+    }
+
+    /* New Message Page */
+    #ConversationForm .Buttons .Button.Cancel{
+      margin-left: -2px;
+    }
+
+  }
+
+  @media(max-width:600px){
+
+    .foot .footerText{
+      display: block;
+      text-align: center;
+    }
+
+    footer .socialMedia{
+      display: block;
+      margin-top: 10px;
+      margin-right: 33%;
+      text-align: center !important;
+    }
+
   }
 
   @media(max-width:555px){
-    .SiteMenu{
+    .SiteMenu,
+    .ProfileOptions{
     display: none;
    }
+
+   #logo{
+     width:45px;
+     margin-bottom: -3px;
+   }
+   #Head .SiteTitle a{
+     font-size: 25px;
+   }
+
+   .ItemContent .Meta .MItem{
+    display: inline-block;
+   }
+
+   #Form_Comment .Buttons #Form_PostComment{
+     margin-left: 5px;
+   }
+
+   /*.Gender.User-Gender .RadioLabel,*/
+   /*.Gender.User-Gender .RadioLabel input{
+     display: block;
+   }*/
   }
