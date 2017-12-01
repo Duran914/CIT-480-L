@@ -96,7 +96,8 @@ input[type="file"]::-webkit-file-upload-button{
   color:#00BFA5
 }
 
-.PhotoWrap img{
+.PhotoWrap img,
+ .ProfilePhotoSmall{
   border-radius: 5px;
 }
 
@@ -192,6 +193,10 @@ input[type="file"]::-webkit-file-upload-button{
  padding: 10px;
  border-radius: 5px;
  box-shadow: 0px 0px 15px #9E9E9E;
+}
+
+.MeBox .WhoIs a.Username{
+  margin-left: 5px;
 }
 
 .MeBox > a,
@@ -372,7 +377,7 @@ input[type="file"]::-webkit-file-upload-button{
 }
 
 /* remove rss button */
-.Column .DataList .Item .Meta img{
+.Column .DataList .Item .Meta .MItem.RSS{
   display:none;
 }
 
@@ -421,7 +426,7 @@ placement(only for root user) */
  }
 
  /* ==================================================
-    styling for leaving a comment response within a category
+    styling for leaving a comment response within a Discussion
  ================================================== */
 
 /* Add styling for header */
@@ -460,7 +465,8 @@ placement(only for root user) */
    display: none;
  }
 
-  .CommentFormWrap .Form-BodyWrap{
+  .CommentFormWrap .Form-BodyWrap,
+  .MessageFormWrap .Form-BodyWrap{
     background-color: #00796B;
     border-radius: 5px;
     box-shadow: 0px 0px 15px #9E9E9E;
@@ -526,6 +532,14 @@ placement(only for root user) */
 .MessageForm .CommentFormWrap form#Form_Comment{
   box-shadow:none;
 }
+/* edit/delete comment(admin only) */
+.Comment .Options ul.Flyout{
+  /*padding-right: 2px;*/
+  padding-left: 2px;
+}
+.Comment .Options ul.Flyout li{
+  margin-left: 1px;
+}
 
 /* ==================================================
    styling for New Dicussion
@@ -560,7 +574,7 @@ placement(only for root user) */
    recent disscusions page
 ================================================== */
 /* Higlighting for new message */
-.DataList .ItemContent .Meta .HasNew{
+ .ItemContent .Meta .HasNew{
   background-color:#B2DFDB;
 }
 
@@ -786,25 +800,31 @@ input[type="file"]::-webkit-file-upload-button{
     pop up dialog boexs
 ================================================== */
 
-/* sign in dialog box */
+/* sign in dialog box & ForgotPassword */
 /* green border abount input fields */
 
-.Entry .MainForm input.InputBox{
+.Entry .MainForm input.InputBox,
+#Form_User_Password input[type="text"]{
   border: 2px solid #00796B;
 }
 
 .Entry .MainForm a.ForgotPassword,
-.CreateAccount a{
+#Form_User_Password a.ForgotPassword,
+.CreateAccount a
+{
   color:#00796B;
 }
 
 .Entry .MainForm a.ForgotPassword:hover,
+#Form_User_Password a.ForgotPassword:hover,
 .CreateAccount a:hover{
   color:#00BFA5;
 }
 
+/* dialog buttons */
 form#Form_User_SignIn .Buttons input.Button,
-.Buttons.Footer input /* dialog box for deleting comment in Discussion page */
+.Buttons.Footer input, /* dialog box for deleting comment in Discussion page */
+#Form_User_Password input[type="submit"]
 {
   background-color:#00796B;
   color:#ffffff;
@@ -813,11 +833,66 @@ form#Form_User_SignIn .Buttons input.Button,
 }
 
 form#Form_User_SignIn .Buttons input.Button:hover,
-.Buttons.Footer input:hover /* dialog box for deleting comment in Discussion page */
+.Buttons.Footer input:hover, /* dialog box for deleting comment in Discussion page */
+#Form_User_Password input[type="submit"]:hover
 {
   color:#FFCA28;
   background-color: #00695C;
 }
+
+/* ==================================================
+    INBOX style
+================================================== */
+
+.Box.AddPeople .Buttons #Form_Add{
+  background-color:#00796B;
+  color:#ffffff;
+  box-shadow: 2px 2px 5px #9E9E9E;
+  border: none;
+}
+
+.Box.AddPeople .Buttons #Form_Add:hover{
+  color:#FFCA28;
+  background-color: #00695C;
+}
+
+.DataListWrap h1 a{
+  color: #FFCA28;
+}
+
+.DataListWrap h1 a:hover{
+  color: #ffffff;
+}
+
+.Author .Name,
+span.Username,
+.Users a,
+.Excerpt a{
+  color:#00796B;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+}
+
+.Author .Name:hover,
+span.Username:hover,
+.Users a:hover,
+.Excerpt a:hover{
+  color:#00BFA5;
+}
+
+
+.Box.InThisConversation ul.PanelInfo li{
+  background-color: #f2f2f2;
+  border: none;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+.Box.InThisConversation ul.PanelInfo li:hover{
+   background-color: #f2f2f2;
+}
+
 
 /* ==================================================
      FOOTER styleing
@@ -916,17 +991,20 @@ footer.foot{
    }
  }
 
-  @media(max-width:752px){
+  @media(max-width:769px){
 
-    #Head,
+    /*#Head,*/
     #Content,
-    .Box.GuestBox /* Welcome messages for user not loged-in */
+    .Box.GuestBox, /* Welcome messages for user not loged-in */
+    .Box.InThisConversation
     {
       text-align: center;
     }
     .MessageList .Discussion,
     .CommentsWrap .DataBox div:not(:nth-child(0)),
-    .Profile ul.DataList
+    .Profile ul.DataList,
+    .DataList.MessageList.Conversation,
+    .ItemContent.Conversation
     {
       text-align: left;
     }
@@ -948,7 +1026,8 @@ footer.foot{
     .Column .CategoryFilter,
     .Column .CategoryFilterOptions,
     .Column .BoxFilter,
-    .Column .Box.BoxCategories{
+    .Column .Box.BoxCategories
+    {
       display: none;
       border-top: none;
     }
@@ -1037,6 +1116,11 @@ footer.foot{
     #ConversationForm .Buttons .Button.Cancel{
       margin-left: -2px;
     }
+    /* INBOX (in this conversationa) */
+    #Panel .PanelInfo li{
+      display: inline;
+    }
+
 
   }
 
@@ -1057,6 +1141,10 @@ footer.foot{
   }
 
   @media(max-width:555px){
+
+    #Head{
+      text-align: center;
+    }
     .SiteMenu,
     .ProfileOptions{
     display: none;
