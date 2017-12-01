@@ -17,12 +17,10 @@
    grey shading color #e6e6e6
 ================================================== */
 
-
 /* ==================================================
   Google font import
 ================================================== */
 @import url('https://fonts.googleapis.com/css?family=Comfortaa');
-
 
 /* ==================================================
   Global varibles
@@ -99,6 +97,7 @@ input[type="file"]::-webkit-file-upload-button{
 .PhotoWrap img,
  .ProfilePhotoSmall{
   border-radius: 5px;
+  color:#00796B; /* if img file is not found */
 }
 
 /* ==================================================
@@ -266,7 +265,7 @@ input[type="file"]::-webkit-file-upload-button{
 .BoxFilter,
 .Box.BoxCategories,/* styling for catergories list */
 .Box.Group.SideMenu .PanelInfo{
-  background-color:#ffffff;
+  background-color:#f2f2f2;
   border-radius: 5px;
   border: 2px solid #00796B;
   text-align: center;
@@ -277,7 +276,7 @@ input[type="file"]::-webkit-file-upload-button{
 .Box.BoxCategories li,
 .PanelInfo li{
   color:#FFCA28;
-  background-color: #ffffff;
+  background-color: #f2f2f2;
 }
 
 .FilterMenu li:hover,
@@ -641,11 +640,13 @@ border-top-left-radius:5px;
   color:#000000 !important;
 }
 
-.Profile .User .About.P a{
+.Profile .User .About.P a,
+.Profile .User a.Hijack{
   color:#00796B;
 }
 
-.Profile .User .About.P a:hover{
+.Profile .User .About.P a:hover,
+.Profile .User a.Hijack:hover{
 /*admin only, roles/register/ast IP*/
   color: #00BFA5;
 }
@@ -950,9 +951,9 @@ footer.foot{
      margin-left: 10px;
    }
 
-#Frame{
-  overflow: hidden;
-}
+   #Frame{
+    overflow: hidden;
+   }
    #Panel, #Content{
      padding-left: 5%;
    }
@@ -962,7 +963,7 @@ footer.foot{
      width: 104%;
    }
    .Column .CommentsWrap ul.MessageList li{
-     width: 95%;
+     width: 96%;
    }
 
    .Column .CommentsWrap ul{
@@ -1000,6 +1001,7 @@ footer.foot{
     {
       text-align: center;
     }
+
     .MessageList .Discussion,
     .CommentsWrap .DataBox div:not(:nth-child(0)),
     .Profile ul.DataList,
@@ -1026,7 +1028,7 @@ footer.foot{
     .Column .CategoryFilter,
     .Column .CategoryFilterOptions,
     .Column .BoxFilter,
-    .Column .Box.BoxCategories
+    .Box.BoxCategories
     {
       display: none;
       border-top: none;
@@ -1117,10 +1119,15 @@ footer.foot{
       margin-left: -2px;
     }
     /* INBOX (in this conversationa) */
-    #Panel .PanelInfo li{
-      display: inline;
-    }
+    /*#Panel .PanelInfo li{
+      display: block;
+    }*/
 
+    /* Resetting password strenght bar */
+    .PasswordStrength{
+     width: 40% !important;
+     margin-left: 30%;
+    }
 
   }
 
@@ -1133,9 +1140,9 @@ footer.foot{
 
     footer .socialMedia{
       display: block;
-      margin-top: 10px;
-      margin-right: 33%;
-      text-align: center !important;
+      /*margin-top: 10px;
+      margin-right: 33%;*/
+
     }
 
   }
