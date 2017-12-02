@@ -49,15 +49,6 @@ body{
   padding-bottom: 5%;
 }
 
-/*#Panel{
-  margin-top: -72%;
-  margin-left: 10%;
-}
-
-#Content{
-  margin-right: 5%;
-}*/
-
 textarea,
 input[type="text"],
 input[type="password"],
@@ -107,10 +98,10 @@ input[type="file"]::-webkit-file-upload-button{
   background-color:#00796B;
   border-bottom: 4px solid #FFCA28;
   color: #ffffff;
-  box-shadow: 0px 0px 15px #9E9E9E;
+
 }
 
-#Head a {
+#Head .SiteMenu a {
     color:  #FFCA28;
     font-weight: bold;
     text-decoration: none;
@@ -128,6 +119,16 @@ input[type="file"]::-webkit-file-upload-button{
     font-family: 'Comfortaa', fantasy;
     text-shadow: 1px 1px #000;
 }
+
+ #Head .hamburgerMenu{
+   font-size: 30px;
+   display: none;
+   color:#FFCA28;
+ }
+
+  #Head .hamburgerMenu:hover{
+    color:#ffffff;
+  }
 
 /* ==================================================
    Monshine logo
@@ -157,15 +158,6 @@ input[type="file"]::-webkit-file-upload-button{
   margin-right: 5px;
 }
 
-/* Hamburger menu */
-/*#Head span.Responsive .DropdownMenu{
-  margin-top: 30px;
-  margin-right: 20px;
-  cursor: pointer;
-  float: right;
-  font-size: 40px;
-  display: none;
-}*/
 /* ==================================================
   Breadcrum menu
 ================================================== */
@@ -994,7 +986,19 @@ footer.foot{
 
   @media(max-width:769px){
 
-    /*#Head,*/
+    /* Sticky navbar */
+    #Head{
+      position: fixed;
+      z-index: 1000;
+      width: 100%;
+      box-shadow: 0px 0px 15px #000;
+    }
+
+    .BreadcrumbsWrapper{
+      margin-top: 20%;
+      margin-bottom: -5%;
+    }
+
     #Content,
     .Box.GuestBox, /* Welcome messages for user not loged-in */
     .Box.InThisConversation
@@ -1011,13 +1015,35 @@ footer.foot{
       text-align: left;
     }
 
+    .SiteMenu{
+      display: none;
+    }
+
     #Head .SiteTitle a{
       font-size: 30px;
     }
 
-    .SiteMenu{
-    margin-top: 35px;
+    #Head .hamburgerMenu{
+      float: right;
+      display: inline;
+      margin-top: 31px;
+      margin-right: 30px;
+    }
+/* javascript trigger for Responsive menu */
+    .SiteMenu.Responsive{
+     background-color:#00796B;
+     display: block;
+     width: 102%;
+     margin-right: -3px;
+     text-align: center;
+     margin-top: 5px;
+     padding: 15px;
   }
+
+  .SiteMenu.Responsive a{
+    display: block;
+  }
+
 
     .BreadcrumbsWrapper{
       margin-left: 30px;
@@ -1149,12 +1175,17 @@ footer.foot{
 
   @media(max-width:555px){
 
-    #Head{
+    /*#Head{
       text-align: center;
-    }
-    .SiteMenu,
+    }*/
     .ProfileOptions{
     display: none;
+   }
+
+   #Head .hamburgerMenu{
+     font-size: 20px;
+     margin-top: 23px;
+     margin-right: 27px;
    }
 
    #logo{
@@ -1173,8 +1204,8 @@ footer.foot{
      margin-left: 5px;
    }
 
-   /*.Gender.User-Gender .RadioLabel,*/
-   /*.Gender.User-Gender .RadioLabel input{
-     display: block;
-   }*/
+   .Flyout.FlyoutMenu{
+     width:240px;
+   }
+
   }

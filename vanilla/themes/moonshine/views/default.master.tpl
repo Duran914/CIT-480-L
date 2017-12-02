@@ -10,15 +10,17 @@
 
 <div id="Frame">
     <div class="Head" id="Head">
-        <div class="row">   <!--http://collegevault.com/wp-content/uploads/2014/11/Little_Brown_Jug_2.png-->
+        <div class="row">
             <img id="logo" src="http://www.clker.com/cliparts/d/C/V/s/q/D/oktoberfest-beer-mug.svg" alt="">
             <strong class="SiteTitle"><a href="{link path="/"}">{logo}</a></strong>
-            <!-- <div class="SiteSearch">{searchbox}</div> -->
-            <ul class="SiteMenu">
-                 <!-- {dashboard_link} -->
-                {inbox_link}
-                {profile_link}
-               {signinout_link}
+            <a href="javascript:void(0);" class="hamburgerMenu"
+            onclick="dropdownMenu()">&#9776;</a>
+
+            <ul class="SiteMenu" id="DropDownMenuClick">
+                 <li>{home_link}</li>
+                <li>{inbox_link}</li>
+                <li>{profile_link}</li>
+               <li>{signinout_link}</li>
             </ul>
         </div>
     </div>
@@ -55,5 +57,21 @@
      <i class="fa fa-google-plus" aria-hidden="true"></i>
     </span>
 </footer>
+
+
+
+<script type="text/javascript">
+
+{literal}
+  function dropdownMenu() {
+    var x = document.getElementById('DropDownMenuClick');
+      if (x.className === "SiteMenu") {
+        x.className += " Responsive";
+      } else{
+        x.className = "SiteMenu";
+     }
+  }
+    {/literal}
+</script>
 </body>
 </html>
