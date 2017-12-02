@@ -799,6 +799,7 @@ input[type="file"]::-webkit-file-upload-button{
 .Entry .MainForm input.InputBox,
 #Form_User_Password input[type="text"]{
   border: 2px solid #00796B;
+  z-index: 5;
 }
 
 .Entry .MainForm a.ForgotPassword,
@@ -823,6 +824,7 @@ form#Form_User_SignIn .Buttons input.Button,
   color:#ffffff;
   box-shadow: 2px 2px 5px #9E9E9E;
   border: none;
+  z-index: 5;
 }
 
 form#Form_User_SignIn .Buttons input.Button:hover,
@@ -973,7 +975,12 @@ footer.foot{
    }
 
  }
-
+ @media(max-width: 830px){
+ #Head .SiteTitle a{
+   font-size: 40px;
+ }
+ 
+}
  @media(max-width:815px){
   #Content{
      padding-left: 0%;
@@ -989,14 +996,14 @@ footer.foot{
     /* Sticky navbar */
     #Head{
       position: fixed;
-      z-index: 1000;
+      z-index: 2;
       width: 100%;
       box-shadow: 0px 0px 15px #000;
     }
 
     .BreadcrumbsWrapper{
-      margin-top: 20%;
-      margin-bottom: -5%;
+      margin-top: 90px;
+      margin-bottom: -15px;
     }
 
     #Content,
@@ -1112,9 +1119,6 @@ footer.foot{
       display: inline-block;
     }
 
-    /*.DiscussionForm .FormWrapper .Buttons{
-      display: block;
-    }*/
     /* Profile papge */
     .Profile .DataListWrap{
       margin-top: 50px;
@@ -1166,18 +1170,11 @@ footer.foot{
 
     footer .socialMedia{
       display: block;
-      /*margin-top: 10px;
-      margin-right: 33%;*/
-
     }
 
   }
 
   @media(max-width:555px){
-
-    /*#Head{
-      text-align: center;
-    }*/
     .ProfileOptions{
     display: none;
    }
