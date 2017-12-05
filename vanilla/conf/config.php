@@ -12,7 +12,7 @@ $Configuration['Conversations']['Version'] = '2.3.1';
 $Configuration['Database']['Name'] = 'vanilla_db';
 $Configuration['Database']['Host'] = 'localhost';
 $Configuration['Database']['User'] = 'root';
-$Configuration['Database']['Password'] = 'root';
+$Configuration['Database']['Password'] = '';
 
 // EnabledApplications
 $Configuration['EnabledApplications']['Conversations'] = 'conversations';
@@ -22,9 +22,11 @@ $Configuration['EnabledApplications']['Vanilla'] = 'vanilla';
 $Configuration['EnabledPlugins']['GettingStarted'] = false;
 $Configuration['EnabledPlugins']['HtmLawed'] = 'HtmLawed';
 $Configuration['EnabledPlugins']['CSSedit'] = true;
+$Configuration['EnabledPlugins']['Facebook'] = false;
+$Configuration['EnabledPlugins']['GooglePlus'] = false;
 
 // Garden
-$Configuration['Garden']['Title'] = 'MoonShine Systems';
+$Configuration['Garden']['Title'] = 'Beercules Forum';
 $Configuration['Garden']['Cookie']['Salt'] = 'CrTo2AKyODiu6cjh';
 $Configuration['Garden']['Cookie']['Domain'] = '';
 $Configuration['Garden']['Registration']['ConfirmEmail'] = false;
@@ -45,9 +47,11 @@ $Configuration['Garden']['Version'] = '2.3.1';
 $Configuration['Garden']['Cdns']['Disable'] = false;
 $Configuration['Garden']['CanProcessImages'] = true;
 $Configuration['Garden']['Installed'] = true;
-$Configuration['Garden']['HomepageTitle'] = 'MoonShine Systems';
+$Configuration['Garden']['HomepageTitle'] = 'Welcome To The Beercules Community';
 $Configuration['Garden']['Description'] = '';
 $Configuration['Garden']['Theme'] = 'moonshine';
+$Configuration['Garden']['MobileTheme'] = 'moonshine';
+$Configuration['Garden']['FavIcon'] = 'favicon_c1caffa68fe1a946.ico';
 
 // Plugins
 $Configuration['Plugins']['GettingStarted']['Dashboard'] = '1';
@@ -64,5 +68,8 @@ $Configuration['Routes']['DefaultController'] = array('categories', 'Internal');
 $Configuration['Vanilla']['Version'] = '2.3.1';
 $Configuration['Vanilla']['Discussions']['Layout'] = 'modern';
 $Configuration['Vanilla']['Categories']['Layout'] = 'modern';
+$Configuration['Vanilla']['Categories']['MaxDisplayDepth'] = '3';
+$Configuration['Vanilla']['Categories']['DoHeadings'] = false;
+$Configuration['Vanilla']['Categories']['HideModule'] = false;
 
-// Last edited by duran914 (127.0.0.1)2017-09-16 06:21:48
+// Last edited by duran914 (127.0.0.1)2017-12-01 22:51:12

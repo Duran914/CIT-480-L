@@ -30,7 +30,7 @@
             <div class="BreadcrumbsWrapper">{breadcrumbs}</div>
           </div>
         </div>
-
+        <!-- <div class="container"> -->
         <div class="Row">
           <div class="col-2">
             <div class="Column PanelColumn" id="Panel">
@@ -39,7 +39,8 @@
                 </div>
               </div>
               <div class="col-10">
-            <div class="Column ContentColumn" onm="loadNewMessage()" id="Content">{asset name="Content"}</div>
+            <div class="Column ContentColumn" id="Content">{asset name="Content"}</div>
+          <!-- </div> -->
            </div>
          </div>
          </div>

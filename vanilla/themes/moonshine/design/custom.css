@@ -799,7 +799,7 @@ input[type="file"]::-webkit-file-upload-button{
 .Entry .MainForm input.InputBox,
 #Form_User_Password input[type="text"]{
   border: 2px solid #00796B;
-  z-index: 5;
+  z-index: 0;
 }
 
 .Entry .MainForm a.ForgotPassword,
@@ -824,7 +824,7 @@ form#Form_User_SignIn .Buttons input.Button,
   color:#ffffff;
   box-shadow: 2px 2px 5px #9E9E9E;
   border: none;
-  z-index: 5;
+  z-index: 0;
 }
 
 form#Form_User_SignIn .Buttons input.Button:hover,
@@ -979,7 +979,7 @@ footer.foot{
  #Head .SiteTitle a{
    font-size: 40px;
  }
- 
+
 }
  @media(max-width:815px){
   #Content{
@@ -996,14 +996,19 @@ footer.foot{
     /* Sticky navbar */
     #Head{
       position: fixed;
-      z-index: 2;
+      z-index: 1000;
       width: 100%;
       box-shadow: 0px 0px 15px #000;
     }
 
     .BreadcrumbsWrapper{
       margin-top: 90px;
-      margin-bottom: -15px;
+      /*margin-bottom: -5px;*/
+    }
+
+    .MeBox,
+    .Box.GuestBox{
+      margin-top: -20px;
     }
 
     #Content,
