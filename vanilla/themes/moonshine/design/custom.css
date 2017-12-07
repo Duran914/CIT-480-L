@@ -91,6 +91,10 @@ input[type="file"]::-webkit-file-upload-button{
   color:#00796B; /* if img file is not found */
 }
 
+.SiteMenu hr{
+  display: none;
+}
+
 /* ==================================================
   Nav Bar styling
 ================================================== */
@@ -101,15 +105,27 @@ input[type="file"]::-webkit-file-upload-button{
 
 }
 
+.SiteMenu{
+  float:right;
+  margin-top: 45px;
+  margin-right: 5px;
+}
+
 #Head .SiteMenu a {
-    color:  #FFCA28;
+    color:#FFCA28;
     font-weight: bold;
     text-decoration: none;
     font-size: 12px;
 }
 
+#Head .SiteMenu a.SignOut:hover{
+  color:#ff4d4d;
+  border-bottom: 2px solid #ff4d4d;
+}
+
 #Head a:hover{
-    color: #ffffff;
+    color:#ffffff;
+    border-bottom: 2px solid #ffffff;
 }
 
 #Head .SiteTitle a {
@@ -126,6 +142,12 @@ input[type="file"]::-webkit-file-upload-button{
    color:#FFCA28;
  }
 
+ .SiteSearch .InputBox, .SiteSearch .Button{
+   border-radius: 5px;
+   margin-top: 50px;
+   padding:7px;
+ }
+
   #Head .hamburgerMenu:hover{
     color:#ffffff;
   }
@@ -136,26 +158,6 @@ input[type="file"]::-webkit-file-upload-button{
 #logo{
   width:80px;
   margin-bottom: -8px;
-}
-/* ==================================================
-  Navbar ul styling
-================================================== */
-
-.SiteSearch .InputBox, .SiteSearch .Button{
-  border-radius: 5px;
-  margin-top: 50px;
-  padding:7px;
-}
-
-.signinout{
-  float: right;
-  padding-right:5px;
-}
-
-.SiteMenu{
-  float:right;
-  margin-top: 55px;
-  margin-right: 5px;
 }
 
 /* ==================================================
@@ -443,7 +445,7 @@ placement(only for root user) */
  }
 
  .Discussion .Item-Header .AuthorWrap .Author a.Username:hover{
-   color:#FFD740;
+   color:#ffffff;
  }
 
  .Discussion .Item-Header .Meta .MItem a{
@@ -1001,6 +1003,14 @@ footer.foot{
       box-shadow: 0px 0px 15px #000;
     }
 
+    .SiteMenu hr{
+      display: block;
+    }
+    #Head a:hover, #Head .SiteMenu a.SignOut:hover{
+        border-bottom: none;
+    }
+
+
     .BreadcrumbsWrapper{
       margin-top: 90px;
       /*margin-bottom: -5px;*/
@@ -1153,10 +1163,6 @@ footer.foot{
     #ConversationForm .Buttons .Button.Cancel{
       margin-left: -2px;
     }
-    /* INBOX (in this conversationa) */
-    /*#Panel .PanelInfo li{
-      display: block;
-    }*/
 
     /* Resetting password strenght bar */
     .PasswordStrength{
@@ -1168,13 +1174,14 @@ footer.foot{
 
   @media(max-width:600px){
 
-    .foot .footerText{
+    .foot .footerText, .foot .socialMedia{
       display: block;
       text-align: center;
-    }
+   }
 
-    footer .socialMedia{
-      display: block;
+   .foot i.fa{
+     float:none;
+     padding-left: 5%;
     }
 
   }

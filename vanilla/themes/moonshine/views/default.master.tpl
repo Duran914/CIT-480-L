@@ -3,6 +3,7 @@
 <head>
     {asset name="Head"}
   <link rel="stylesheet" type="text/css" href="custom.css">
+  <link rel="shortcut icon" href="http://www.clker.com/cliparts/d/C/V/s/q/D/oktoberfest-beer-mug.svg">
   <meta name="viewport" content="width=device-width">
   <script src="https://use.fontawesome.com/c5b9554837.js"></script>
 </head>
@@ -17,10 +18,10 @@
             onclick="dropdownMenu()">&#9776;</a>
 
             <ul class="SiteMenu" id="DropDownMenuClick">
-                 <li>{home_link}</li>
-                <li>{inbox_link}</li>
-                <li>{profile_link}</li>
-               <li>{signinout_link}</li>
+            <hr> <li>{home_link}</li><hr>
+                <li>{inbox_link}</li><hr>
+                <li>{profile_link}</li><hr>
+               <li>{signinout_link}</li><hr>
             </ul>
         </div>
     </div>
@@ -30,7 +31,6 @@
             <div class="BreadcrumbsWrapper">{breadcrumbs}</div>
           </div>
         </div>
-        <!-- <div class="container"> -->
         <div class="Row">
           <div class="col-2">
             <div class="Column PanelColumn" id="Panel">
@@ -40,25 +40,20 @@
               </div>
               <div class="col-10">
             <div class="Column ContentColumn" id="Content">{asset name="Content"}</div>
-          <!-- </div> -->
            </div>
          </div>
          </div>
         </div>
-    </div>
-</div>
 {event name="AfterBody"}
 <footer class="foot">
-    <span class="footerText">MoonShine Systems Copyright &copy 2017. All Rights Reserved</span>
+  <span class="footerText">MoonShine Systems Inc. Copyright &copy 2017. All Rights Reserved</span>
     <span class="socialMedia">
      <i class="fa fa-facebook-official" aria-hidden="true"></i>
-     <i class="fa fa-instagram" aria-hidden="true"></i>
-     <i class="fa fa-twitter" aria-hidden="true"></i>
+      <i class="fa fa-instagram" aria-hidden="true"></i>
+      <i class="fa fa-twitter" aria-hidden="true"></i>
      <i class="fa fa-google-plus" aria-hidden="true"></i>
     </span>
 </footer>
-
-
 
 <script type="text/javascript">
 
