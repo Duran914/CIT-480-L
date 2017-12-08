@@ -94,7 +94,14 @@ input[type="file"]::-webkit-file-upload-button{
 .SiteMenu hr{
   display: none;
 }
-
+select{
+background-color: #e6e6e6;
+ color:#00796B;
+ border: none;
+}
+#Frame{
+ overflow: hidden;
+}
 /* ==================================================
   Nav Bar styling
 ================================================== */
@@ -123,7 +130,7 @@ input[type="file"]::-webkit-file-upload-button{
   border-bottom: 2px solid #ff4d4d;
 }
 
-#Head a:hover{
+#Head .SiteMenu a:hover{
     color:#ffffff;
     border-bottom: 2px solid #ffffff;
 }
@@ -131,7 +138,7 @@ input[type="file"]::-webkit-file-upload-button{
 #Head .SiteTitle a {
     color: #ffffff;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 40px;
     font-family: 'Comfortaa', fantasy;
     text-shadow: 1px 1px #000;
 }
@@ -480,7 +487,7 @@ placement(only for root user) */
     background-color: #e6e6e6;
     border: none;
     border-radius: 5px;
-    width:680px;
+    width: 97.2%;
     margin-left: 10px;
     margin-bottom: 20px;
 
@@ -801,7 +808,7 @@ input[type="file"]::-webkit-file-upload-button{
 .Entry .MainForm input.InputBox,
 #Form_User_Password input[type="text"]{
   border: 2px solid #00796B;
-  z-index: 0;
+
 }
 
 .Entry .MainForm a.ForgotPassword,
@@ -820,18 +827,22 @@ input[type="file"]::-webkit-file-upload-button{
 /* dialog buttons */
 form#Form_User_SignIn .Buttons input.Button,
 .Buttons.Footer input, /* dialog box for deleting comment in Discussion page */
-#Form_User_Password input[type="submit"]
+#Form_User_Password input[type="submit"],
+.Buttons.Buttons-Confirm input,
+.Buttons #Form_Move
 {
   background-color:#00796B;
   color:#ffffff;
   box-shadow: 2px 2px 5px #9E9E9E;
   border: none;
-  z-index: 0;
+
 }
 
 form#Form_User_SignIn .Buttons input.Button:hover,
 .Buttons.Footer input:hover, /* dialog box for deleting comment in Discussion page */
-#Form_User_Password input[type="submit"]:hover
+#Form_User_Password input[type="submit"]:hover,
+.Buttons.Buttons-Confirm input:hover,
+.Buttons #Form_Move:hover
 {
   color:#FFCA28;
   background-color: #00695C;
@@ -894,7 +905,6 @@ span.Username:hover,
 /* ==================================================
      FOOTER styleing
 ================================================== */
-
 footer.foot{
   background-color: #00796B;
   padding: 15px;
@@ -946,10 +956,6 @@ footer.foot{
    .BreadcrumbsWrapper{
      margin-left: 10px;
    }
-
-   #Frame{
-    overflow: hidden;
-   }
    #Panel, #Content{
      padding-left: 5%;
    }
@@ -973,7 +979,7 @@ footer.foot{
    /* Leaving a comment in Discussion page,  button for Post Comment  */
    .CommentFormWrap #Form_Comment .CommentButton{
      margin-top: 10px;
-     margin-right: 35px;
+     margin-right: 5px;
    }
 
  }
@@ -995,25 +1001,20 @@ footer.foot{
 
   @media(max-width:769px){
 
-    /* Sticky navbar */
-    #Head{
-      position: fixed;
-      z-index: 1000;
-      width: 100%;
-      box-shadow: 0px 0px 15px #000;
+    #Frame{
+     overflow: visible;
     }
 
     .SiteMenu hr{
       display: block;
     }
-    #Head a:hover, #Head .SiteMenu a.SignOut:hover{
+    #Head .SiteMenu a:hover, #Head .SiteMenu a.SignOut:hover{
         border-bottom: none;
     }
 
-
     .BreadcrumbsWrapper{
-      margin-top: 90px;
-      /*margin-bottom: -5px;*/
+      margin-top: 20px;
+      margin-bottom: -5px;
     }
 
     .MeBox,
