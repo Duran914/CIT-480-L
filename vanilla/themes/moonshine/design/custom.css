@@ -91,9 +91,6 @@ input[type="file"]::-webkit-file-upload-button{
   color:#00796B; /* if img file is not found */
 }
 
-.SiteMenu hr{
-  display: none;
-}
 select{
 background-color: #e6e6e6;
  color:#00796B;
@@ -113,7 +110,7 @@ background-color: #e6e6e6;
 }
 
 .SiteMenu{
-  float:right;
+  float:right!important;
   margin-top: 45px;
   margin-right: 5px;
 }
@@ -164,7 +161,7 @@ background-color: #e6e6e6;
 ================================================== */
 #logo{
   width:80px;
-  margin-bottom: -8px;
+  /*margin-bottom: -8px;*/
 }
 
 /* ==================================================
@@ -437,6 +434,8 @@ placement(only for root user) */
    border: 2px solid #00796B;
    padding: 5px;
    border-radius: 5px;
+   box-shadow: 0px 0px 15px #9E9E9E;
+   /* This Line *!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
  }
 
  .MessageList .Item .Discussion{
@@ -463,6 +462,11 @@ placement(only for root user) */
  .Discussion .Item-Header .Meta .MItem.Category,
  .Discussion .Item-Header .Meta .MItem.IPAddress{
    display: none;
+ }
+
+ .ItemContent .Meta .MItem.LastDiscussionTitle{
+   display:inline-block;
+   padding-right: 1px;
  }
 
   .CommentFormWrap .Form-BodyWrap,
@@ -931,15 +935,22 @@ footer.foot{
   color:#FFCA28;
   opacity: 1;
 }
-/* ==================================================
-            MEDIA QUIRES
-================================================== */
- @media(max-width:990px){
 
    /* ============================
               THE GRID
    ==============================*/
+   .row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 
+  .row:after{
+    display: table;
+    clear: both;
+    content: "";
+  }
    .col-1 {width: 8.33%;}
    .col-2 {width: 16.66%;}
    .col-3 {width: 25%;}
@@ -952,6 +963,11 @@ footer.foot{
    .col-10 {width: 83.33%;}
    .col-11 {width: 91.66%;}
    .col-12 {width: 100%;}
+
+   /* ==================================================
+               MEDIA QUIRES
+   ================================================== */
+    @media(max-width:990px){
 
    .BreadcrumbsWrapper{
      margin-left: 10px;
@@ -1005,9 +1021,6 @@ footer.foot{
      overflow: visible;
     }
 
-    .SiteMenu hr{
-      display: block;
-    }
     #Head .SiteMenu a:hover, #Head .SiteMenu a.SignOut:hover{
         border-bottom: none;
     }
@@ -1206,8 +1219,12 @@ footer.foot{
      font-size: 25px;
    }
 
-   .ItemContent .Meta .MItem{
-    display: inline-block;
+   /*.ItemContent .Meta .MItem{
+     display: block;
+   }*/
+
+   .DataList .Item .ItemContent .Meta .MItem.LastDiscussionTitle{
+     display: none;
    }
 
    #Form_Comment .Buttons #Form_PostComment{
