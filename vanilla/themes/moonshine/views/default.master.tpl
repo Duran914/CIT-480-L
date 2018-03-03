@@ -2,7 +2,7 @@
 <html lang="{$CurrentLocale.Lang}">
 <head>
     {asset name="Head"}
-  <link rel="stylesheet" type="text/css" href="themes/moonshine/design/custom.css">
+  <link rel="stylesheet" type="text/css" href="custom.css">
   <link rel="shortcut icon" href="http://www.clker.com/cliparts/d/C/V/s/q/D/oktoberfest-beer-mug.svg">
   <meta name="viewport" content="width=device-width">
   <script src="https://use.fontawesome.com/c5b9554837.js"></script>
@@ -11,7 +11,7 @@
 
 <div id="Frame">
     <div class="Head" id="Head">
-
+        <div class="row">
             <img id="logo" src="http://www.clker.com/cliparts/d/C/V/s/q/D/oktoberfest-beer-mug.svg" alt="">
             <strong class="SiteTitle"><a href="{link path="/"}">{logo}</a></strong>
             <a href="javascript:void(0);" class="hamburgerMenu"
@@ -23,7 +23,7 @@
                 <li>{profile_link}</li>
                <li>{signinout_link}</li>
             </ul>
-
+        </div>
     </div>
     <div id="Body">
         <div class="Row">
