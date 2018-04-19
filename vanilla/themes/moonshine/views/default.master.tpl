@@ -21,6 +21,7 @@
                 <li>{home_link}</li>
                 <li>{inbox_link}</li>
                 <li>{profile_link}</li>
+                <li><a id="yelp">Brews & Breweries</a></li>
                <li>{signinout_link}</li>
             </ul>
         </div>
@@ -36,6 +37,13 @@
             <div class="Column PanelColumn" id="Panel">
                 {module name="MeModule"}
                 {asset name="Panel"}
+                <br>
+                <div class="fb-page" data-height="300px" data-width="400px" data-href="https://www.facebook.com/Beercules.party/" data-tabs="timeline" data-small-header="false" data-hide-cover="false" data-show-facepile="true"
+                style="box-shadow: 0 0 10px; border-radius: 5px;">
+                  <blockquote cite="https://www.facebook.com/Beercules.party/" class="fb-xfbml-parse-ignore">
+              <!-- <a href="https://www.facebook.com/Beercules.party/">Beercules</a> -->
+                  </blockquote>
+                </div>
                 </div>
               </div>
               <div class="col-10">
@@ -43,6 +51,7 @@
            </div>
          </div>
          </div>
+
         </div>
 {event name="AfterBody"}
 <footer class="foot">
@@ -58,15 +67,40 @@
 <script type="text/javascript">
 
 {literal}
-  function dropdownMenu() {
-    var x = document.getElementById('DropDownMenuClick');
-      if (x.className === "SiteMenu") {
-        x.className += " Responsive";
-      } else{
-        x.className = "SiteMenu";
-     }
-  }
+
+document.querySelector('#yelp').addEventListener('click', () => {
+document.querySelector('.Column.ContentColumn').innerHTML =
+`<section class="yelp">
+<h2>Search For Breweries</h2>
+<form action="" id="yelpForm">
+<div id="error"></div><br>
+<label for="zip">Enter a city or zipcode</label><br>
+<input type="text" id='zipcode'><br>
+<h4>Distance from</h4>
+<input type="radio" class="milesRad" name="mi" id="5mi" value=5 checked>5 miles
+<input type="radio" class="milesRad" name="mi" id="10mi" value=10 >10 Miles
+<input type="radio" class="milesRad" name="mi" id="15mi" value=15 >15 Miles <br>
+<input type="submit" id="yelp-search" value="Search">
+</form>
+<div id="loading">
+    <img src="img/beer.gif" alt="">
+  </div>
+<div id="results"></div>
+</section>
+<br>
+<section class="beerFinder">
+<h2>Search For Beers</h2><br>
+    <label for="beer">Enter a Beer Name: </label><br>
+    <input type="text" id="beerName">
+    <div class="beerResults"></div>
+    <button id="findBeerBtn">Find Beer</button>
+    <div id="beerInfo"></div>
+</section>
+`;
+
+})
     {/literal}
 </script>
+<script src="themes/moonshine/views/script.js"></script>
 </body>
 </html>
