@@ -427,6 +427,35 @@ form#Form_User_SignIn .Buttons input.Button,
     color: #FFCA28;
     background-color: #006f62; }
 
+#yelpForm label, .distance, .beerNameSearch {
+  color: #ffffff; }
+
+.brewsSearchbtn {
+  color: #000000;
+  background-color: #FFCA28;
+  border: none;
+  box-shadow: 2px 2px 5px #000000;
+  padding: 5px;
+  cursor: pointer; }
+  .brewsSearchbtn:hover {
+    background-color: #ffffff;
+    color: #00796B; }
+
+.radioButtonText {
+  color: #ffffff; }
+
+#yellowHeader {
+  background-color: #FFCA28;
+  color: #00796B; }
+
+.brewsError {
+  display: none;
+  color: #ffffff;
+  background: #d50a0a;
+  padding: 4px;
+  border-radius: 5px;
+  text-align: center; }
+
 /* ==================================================
  * Navbar */
 /*================================================== */
@@ -445,14 +474,15 @@ form#Form_User_SignIn .Buttons input.Button,
   font-weight: bold;
   text-decoration: none;
   font-size: 12px;
-  border-bottom: 2px solid #00796B; }
+  border-bottom: 2px solid #00796B;
+  cursor: pointer; }
   #Head .SiteMenu a:hover {
     color: #ffffff;
     border-bottom: 2px solid #ffffff; }
 
 #Head .SiteMenu a.SignOut:hover {
-  color: #ff4d4d;
-  border-bottom: 2px solid #ff4d4d; }
+  color: #d50a0a;
+  border-bottom: 2px solid #d50a0a; }
 
 #Head .SiteTitle a {
   color: #ffffff;
@@ -947,7 +977,16 @@ footer.foot {
   /* Resetting password strenght bar */
   .PasswordStrength {
     width: 40% !important;
-    margin-left: 30%; } }
+    margin-left: 30%; }
+
+  .fb-page {
+    display: none; }
+
+  section.beerFinder {
+    margin-top: 10% !important; }
+
+  .brewsSearchbtn {
+    width: 100%; } }
 @media screen and (max-width: 600px) {
   .foot .footerText, .foot .socialMedia {
     display: block;
