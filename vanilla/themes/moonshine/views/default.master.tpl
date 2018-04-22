@@ -5,7 +5,8 @@
   <link rel="stylesheet" type="text/css" href="custom.css">
   <link rel="shortcut icon" href="http://www.clker.com/cliparts/d/C/V/s/q/D/oktoberfest-beer-mug.svg">
   <meta name="viewport" content="width=device-width">
-  <script src="https://use.fontawesome.com/c5b9554837.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" 
+  integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 </head>
 <body id="{$BodyID}" class="{$BodyClass}">
 
@@ -72,10 +73,10 @@
 
 document.querySelector('#yelp').addEventListener('click', () => {
 document.querySelector('.Column.ContentColumn').innerHTML =
-`    <section class="yelp">
-    <h2 class="H HomepageTitle">Search For Breweries</h2>
+`   <section class="yelp">
+    <h2 id="yellowHeader" class="H HomepageTitle">Search For Breweries</h2>
     <div class="Column FormWrapper">
-    <form action="" id="yelpForm">
+    <form action="" onsubmit="brewerySearch(event)" id="yelpForm">
     <div class="brewsError" id="error"></div>
     <label for="zip"><h3>Enter a city or zipcode</h3></label>
     <input type="text" class="InputBox BigInput" id='zipcode'><br>
@@ -83,11 +84,11 @@ document.querySelector('.Column.ContentColumn').innerHTML =
     <input type="radio" class="milesRad" name="mi" id="5mi" value=5 checked><span class="radioButtonText">5 miles</span>
     <input type="radio" class="milesRad" name="mi" id="10mi" value=10 ><span class="radioButtonText">10 miles</span>
     <input type="radio" class="milesRad" name="mi" id="15mi" value=15 ><span class="radioButtonText">15 miles</span><br><br>
-    <input type="submit" id="yelp-search" class="Button brewsSearchbtn" value="Search">
+    <input type="submit" id="yelp-search" class="brewsSearchbtn" value="Search">
     </form>
     </div>
     <div id="loading">
-        <img src="img/beer.gif" alt="">
+         <img src="themes/moonshine/design/beer.gif" alt="">
       </div>
     <div id="results"></div>
     </section>
@@ -98,7 +99,7 @@ document.querySelector('.Column.ContentColumn').innerHTML =
         <div class="brewsError" id="beerError"></div>
         <label for="beer"><h3 class="beerNameSearch">Enter a Beer Name: </h3></label>
         <input type="text" class="InputBox BigInput" id="beerName"><br><br>
-        <button class="Button brewsSearchbtn" id="findBeerBtn">Find Beer</button>
+        <button onclick="beerSearch(event)" class="brewsSearchbtn" id="findBeerBtn">Find Beer</button>
         </div>
         <div id="beerInfo"></div>
     </section>
