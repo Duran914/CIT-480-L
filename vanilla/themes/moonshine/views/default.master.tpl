@@ -60,10 +60,10 @@
 <footer class="foot">
   <span class="footerText">MoonShine Systems Inc. Copyright &copy 2017. All Rights Reserved</span>
     <span class="socialMedia">
-     <i class="fa fa-facebook-official" aria-hidden="true"></i>
-      <i class="fa fa-instagram" aria-hidden="true"></i>
-      <i class="fa fa-twitter" aria-hidden="true"></i>
-     <i class="fa fa-google-plus" aria-hidden="true"></i>
+     <i class="fab fa-facebook" aria-hidden="true"></i>
+      <i class="fab fa-instagram" aria-hidden="true"></i>
+      <i class="fab fa-twitter" aria-hidden="true"></i>
+     <i class="fab fa-google-plus" aria-hidden="true"></i>
     </span>
 </footer>
 
@@ -85,7 +85,8 @@ document.querySelector('.Column.ContentColumn').innerHTML =
     <input type="radio" class="milesRad" name="mi" id="10mi" value=10 ><span class="radioButtonText">10 miles</span>
     <input type="radio" class="milesRad" name="mi" id="15mi" value=15 ><span class="radioButtonText">15 miles</span><br><br>
     <input type="submit" id="yelp-search" class="brewsSearchbtn" value="Search">
-    </form>
+    </form><br>
+    <button onclick="clearBrewery()" class="brewsSearchbtn" id="clearBreeryBtn" disabled>Clear Search</button>
     </div>
     <div id="loading">
          <img src="themes/moonshine/design/beer.gif" alt="">
@@ -99,7 +100,8 @@ document.querySelector('.Column.ContentColumn').innerHTML =
         <div class="brewsError" id="beerError"></div>
         <label for="beer"><h3 class="beerNameSearch">Enter a Beer Name: </h3></label>
         <input type="text" class="InputBox BigInput" id="beerName"><br><br>
-        <button onclick="beerSearch(event)" class="brewsSearchbtn" id="findBeerBtn">Find Beer</button>
+        <button onclick="beerSearch(event)" class="brewsSearchbtn" id="findBeerBtn">Find Beer</button><br><br>
+        <button onclick="clearBeerSearch()" class="brewsSearchbtn" id="clearBeerBtn" disabled>Clear Search</button>
         </div>
         <div id="beerInfo"></div>
     </section>
