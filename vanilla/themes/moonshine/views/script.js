@@ -21,7 +21,6 @@ function dropdownMenu() {
   /*****************
   YELP component
 *****************/
-
 // yelp zipcode search input
 const searchZipBtn = document.querySelector('#yelpForm');
 
@@ -30,7 +29,6 @@ myHeaders.append("Authorization", "Bearer " + yelpApiKey);
 
 
 function brewerySearch(event){
-  // will migrate css in dedicated css file in actual project
   if (document.querySelector('#zipcode').value === '') {
    document.querySelector('#error').style.display = 'block';
     document.querySelector('#error').innerHTML = "Please enter a vaild city or zipcode";
@@ -73,14 +71,15 @@ const radius = document.querySelector('input[name="mi"]:checked').value * 1609.3
             `;
           }
        document.querySelector('#error').style.display = 'none';
-       document.querySelector('#loading').style.display = 'none';
-       document.querySelector('#results').innerHTML = output;
+        document.querySelector('#loading').style.display = 'none';
+         document.querySelector('#results').innerHTML = output;
+          document.querySelector('#clearBreeryBtn').disabled = false;
       clearFields(zipCode);
        }
        else {
         document.querySelector('#error').style.display = "block";
-        document.querySelector('#error').innerHTML = "No brewery found!";
-        document.querySelector('#loading').style.display = 'none';
+         document.querySelector('#error').innerHTML = "No brewery found!";
+          document.querySelector('#loading').style.display = 'none';
        }  
     }
     xhttp.send();
@@ -90,13 +89,17 @@ const radius = document.querySelector('input[name="mi"]:checked').value * 1609.3
     zipCode = '';
   }
 
+  function clearBrewery(){
+    document.querySelector('#results').innerHTML = '';
+     document.querySelector('#clearBreeryBtn').disabled = true;
+  }
+
   /*****************
   BEER component
 *****************/  
 
   function beerSearch(event){
     if (document.querySelector('#beerName').value === '') {
-      // will migrate css in dedicated css file in actual project
       document.querySelector('#beerError').style.display = 'block';
        document.querySelector('#beerError').innerHTML = "Please enter a beer name";
      }else{
@@ -123,19 +126,50 @@ const radius = document.querySelector('input[name="mi"]:checked').value * 1609.3
             } else{
             for (let i = 0; i < beerinfo.length; i++) {
               beerOutput += `<div class="searchedBeerReturn">
+              <div class="beerReturnImg">
               <img class="beerImg" src='${beerinfo[i].image_url}'><br>
-              <strong>Beer Name:</strong> ${beerinfo[i].name}<br>
-              <strong>Description:</strong>${beerinfo[i].description}<br>
-              <strong>Alcohol by volume:</strong> ${beerinfo[i].abv}%<br>
-              <strong>Food Pairing:</strong> ${beerinfo[i].food_pairing[i]}<br>
-              <strong>IBU level:</strong> ${beerinfo[i].ibu}<br>
-              <strong>Hops:</strong> ${beerinfo[i].ingredients.hops[i].name}<br>
+              </div>
+              <div class="beerReturnText">
+              <strong><span class="beerNameText">${beerinfo[i].name}</strong></span><br>
+              <strong class="beerinfotext">Description:</strong> ${beerinfo[i].description}<br>
+              <strong class="beerinfotext">Alcohol by volume:</strong> ${beerinfo[i].abv}%<br>
+              <strong class="beerinfotext">Food Pairing:</strong> 
+              <div class="foodParing">
+              <ul class="beerFoodPairingUl">
+              <li>1. ${beerinfo[i].food_pairing[0]}.</li>
+              <li>2. ${beerinfo[i].food_pairing[1]}.</li>
+              <li>3. ${beerinfo[i].food_pairing[2]}.</li>
+              </ul>
+              </div>
+              <strong class="beerinfotext">IBU level:</strong> ${beerinfo[i].ibu}<br>
+              <strong class="beerinfotext">Hops:</strong> ${beerinfo[i].ingredients.hops[i].name}<br>
+              </div>
               </div><br>
               `;
             }
           }
           document.querySelector('#beerInfo').innerHTML = beerOutput;
+           document.querySelector('#clearBeerBtn').disabled = false;
         }
       }
       xhttp.send();
     }
+
+function clearBeerSearch(){
+  document.querySelector('#beerInfo').innerHTML = '';
+   document.querySelector('#clearBeerBtn').disabled = true;
+}
+
+
+// for (let i = 0; i < beerinfo.length; i++) {
+//   beerOutput += `<div class="searchedBeerReturn">
+//   <img class="beerImg" src='${beerinfo[i].image_url}'><br>
+//   <strong>Beer Name:</strong> ${beerinfo[i].name}<br>
+//   <strong>Description:</strong>${beerinfo[i].description}<br>
+//   <strong>Alcohol by volume:</strong> ${beerinfo[i].abv}%<br>
+//   <strong>Food Pairing:</strong> ${beerinfo[i].food_pairing[i]}<br>
+//   <strong>IBU level:</strong> ${beerinfo[i].ibu}<br>
+//   <strong>Hops:</strong> ${beerinfo[i].ingredients.hops[i].name}<br>
+//   </div><br>
+//   `;
+// }
