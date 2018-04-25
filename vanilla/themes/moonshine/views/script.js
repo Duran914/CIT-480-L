@@ -59,13 +59,13 @@ const radius = document.querySelector('input[name="mi"]:checked').value * 1609.3
             </div>
             <div class="breweryReturnText">
             <strong><span class="breweryNameText">${brews[i].name} <i class="fas fa-beer"></i></span></strong><br>
-            <strong class="breweryinfotext">Location:</strong> <a href="https://maps.google.com/?q=58250 ${brews[i].location.address1}, 
+            <strong class="breweryinfotext">Location:</strong> <a target="_blank" href="https://maps.google.com/?q=58250 ${brews[i].location.address1}, 
             ${brews[i].location.city} ${brews[i].location.state}">${brews[i].location.address1}, 
             ${brews[i].location.city} ${brews[i].location.state}</a> <i class="fas fa-map-marker"></i><br>
             <strong class="breweryinfotext">Phone Number:</strong> <a href="tel:${brews[i].phone}">${brews[i].phone}</a> <i class="fas fa-phone"></i> <br>
             <strong class="breweryinfotext">Price Range:</strong> <i>${brews[i].price}</i><br>
             <strong class="breweryinfotext">Rating:</strong> ${brews[i].rating}/5 <i class="fas fa-star"></i><br>
-            <strong class="breweryinfotext">View on Yelp:</strong> <a class="yelpLink" href="${brews[i].url}">Click Me <i class="fab fa-yelp"></i></a><br>
+            <strong class="breweryinfotext">View on Yelp:</strong> <a class="yelpLink" target="_blank" href="${brews[i].url}">Click Me <i class="fab fa-yelp"></i></a><br>
             </div>
             </div><br>
             `;
@@ -74,7 +74,7 @@ const radius = document.querySelector('input[name="mi"]:checked').value * 1609.3
         document.querySelector('#loading').style.display = 'none';
          document.querySelector('#results').innerHTML = output;
           document.querySelector('#clearBreeryBtn').disabled = false;
-      clearFields(zipCode);
+            clearFields(zipCode);
        }
        else {
         document.querySelector('#error').style.display = "block";
@@ -131,6 +131,7 @@ const radius = document.querySelector('input[name="mi"]:checked').value * 1609.3
               </div>
               <div class="beerReturnText">
               <strong><span class="beerNameText">${beerinfo[i].name}</strong></span><br>
+              <strong><span class="beerNameTextTag">"${beerinfo[i].tagline}"</strong></span><br>
               <strong class="beerinfotext">Description:</strong> ${beerinfo[i].description}<br>
               <strong class="beerinfotext">Alcohol by volume:</strong> ${beerinfo[i].abv}%<br>
               <strong class="beerinfotext">Food Pairing:</strong> 
@@ -159,17 +160,3 @@ function clearBeerSearch(){
   document.querySelector('#beerInfo').innerHTML = '';
    document.querySelector('#clearBeerBtn').disabled = true;
 }
-
-
-// for (let i = 0; i < beerinfo.length; i++) {
-//   beerOutput += `<div class="searchedBeerReturn">
-//   <img class="beerImg" src='${beerinfo[i].image_url}'><br>
-//   <strong>Beer Name:</strong> ${beerinfo[i].name}<br>
-//   <strong>Description:</strong>${beerinfo[i].description}<br>
-//   <strong>Alcohol by volume:</strong> ${beerinfo[i].abv}%<br>
-//   <strong>Food Pairing:</strong> ${beerinfo[i].food_pairing[i]}<br>
-//   <strong>IBU level:</strong> ${beerinfo[i].ibu}<br>
-//   <strong>Hops:</strong> ${beerinfo[i].ingredients.hops[i].name}<br>
-//   </div><br>
-//   `;
-// }
