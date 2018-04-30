@@ -21,6 +21,7 @@ function dropdownMenu() {
   /*****************
   YELP component
 *****************/
+
 // yelp zipcode search input
 const searchZipBtn = document.querySelector('#yelpForm');
 
@@ -80,6 +81,7 @@ const radius = document.querySelector('input[name="mi"]:checked').value * 1609.3
         document.querySelector('#error').style.display = "block";
          document.querySelector('#error').innerHTML = "No brewery found!";
           document.querySelector('#loading').style.display = 'none';
+          document.querySelector('#clearBreeryBtn').disabled = true;
        }  
     }
     xhttp.send();
@@ -123,6 +125,8 @@ const radius = document.querySelector('input[name="mi"]:checked').value * 1609.3
            if (beerinfo.length === 0) {
             document.querySelector('#beerError').style.display = "block";
             document.querySelector('#beerError').innerHTML = "No beer found!";
+            document.querySelector('#beerInfo').innerHTML = '';
+            document.querySelector('#clearBeerBtn').disabled = true;
             } else{
             for (let i = 0; i < beerinfo.length; i++) {
               beerOutput += `<div class="searchedBeerReturn">
@@ -148,10 +152,10 @@ const radius = document.querySelector('input[name="mi"]:checked').value * 1609.3
               </div><br>
               `;
             }
-          }
           document.querySelector('#beerInfo').innerHTML = beerOutput;
            document.querySelector('#clearBeerBtn').disabled = false;
         }
+      }
       }
       xhttp.send();
     }
